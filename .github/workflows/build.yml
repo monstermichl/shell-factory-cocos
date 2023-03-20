@@ -1,0 +1,68 @@
+name: Build shell-factory-coco
+
+on:
+  push:
+    branches: [ 'main' ]
+  pull_request:
+    branches: [ 'main' ]
+  release:
+    types:
+      - 'created'
+
+env:
+  GIT_MAIL: 'monstermichl@users.noreply.github.com'
+  GIT_USER: 'monstermichl'
+
+jobs:
+  lint:
+    name: Lint source
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Lint source
+        run: |
+          npm ci
+          npm run lint
+
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    needs: lint
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run Unittest
+        run: |
+          npm ci
+          npm run test
+
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
+    - uses: actions/checkout@v3
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+    - run: npm ci
+    - run: npm run build
+
+  # https://docs.github.com/en/actions/publishing-packages/publishing-nodejs-packages#publishing-packages-to-the-npm-registry
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    needs: build
+    if: ${{ github.event_name == 'release' }}
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '18.x'
+          registry-url: 'https://registry.npmjs.org'
+      - run: npm ci
+      - run: npm run build
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

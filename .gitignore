@@ -1,0 +1,8 @@
+dist
+coverage
+tests-build
+.nyc_output
+jail*
+node_modules
+.idea
+./*.sh

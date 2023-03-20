@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "allowJs": false,
+    "alwaysStrict": true,
+    "outDir": "./tests-build",
+    "noImplicitAny": true,
+    "noImplicitOverride": true,
+    "module": "ESNext",
+    "moduleResolution": "nodenext",
+    "target": "ES2022",
+    "sourceMap": true
+  },
+  "include": [
+    "./src/**/*.ts",
+    "./src/**/*.mts",
+    "./tests/**/*.test.ts",
+    "./tests/**/*.test.ts",
+  ]
+}

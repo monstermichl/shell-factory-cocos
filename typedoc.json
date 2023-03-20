@@ -1,0 +1,8 @@
+{
+    "entryPoints": [
+        "src/index.mts"
+    ],
+    "cleanOutputDir": true,
+    "theme": "default",
+    "pretty": true
+}
