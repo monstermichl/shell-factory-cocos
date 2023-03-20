@@ -1,7 +1,7 @@
 {
   "name": "shell-factory-coco",
   "version": "1.0.0",
-  "description": "Basic-commands-extension for shell-factory",
+  "description": "Common commands collection for shell-factory",
   "main": "./dist/index.mjs",
   "types": "./dist/index.d.mts",
   "type": "module",
