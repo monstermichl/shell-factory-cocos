@@ -29,7 +29,7 @@ export class Argument extends ArgumentBase {
 
     /**
      * If the provided value is empty, this function is being called
-     * by the convertValue method.
+     * by the _convertValue method.
      *
      * @returns Quoted empty string.
      */

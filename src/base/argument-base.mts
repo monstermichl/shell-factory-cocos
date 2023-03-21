@@ -31,7 +31,7 @@ export abstract class ArgumentBase {
     /* eslint-disable-next-line @typescript-eslint/no-explicit-any */
     constructor(value?: any) {
         /* Make sure argument is convertible. */
-        this._value = this.convertValue(value);
+        this._value = this._convertValue(value);
     }
 
     /**
@@ -49,6 +49,14 @@ export abstract class ArgumentBase {
     }
 
     /**
+     * If the provided value is empty, this function is being called
+     * by the _convertValue method.
+     *
+     * @returns Whatever the subclass decides is a good choice.
+     */
+    protected abstract _handleEmptyValue(): string | undefined;
+
+    /**
      * Converts a string, number or boolean to a string which is wrapped
      * into quotes if it contains whitespaces.
      * 
@@ -56,7 +64,7 @@ export abstract class ArgumentBase {
      * @returns Converted value.
      */
     /* eslint-disable-next-line @typescript-eslint/no-explicit-any */
-    public convertValue(value: any): string {
+    protected _convertValue(value: any): string {
         let emptyValue = false;
 
         value = convertToString(value, (e: ConvertToStringError) => {
@@ -73,12 +81,4 @@ export abstract class ArgumentBase {
            method to decide what to do. */
         return emptyValue ? this._handleEmptyValue() : wrapInQuotes(value);
     }
-
-    /**
-     * If the provided value is empty, this function is being called
-     * by the convertValue method.
-     *
-     * @returns Whatever the subclass decides is a good choice.
-     */
-    protected abstract _handleEmptyValue(): string | undefined;
 }
