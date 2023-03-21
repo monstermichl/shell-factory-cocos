@@ -92,4 +92,132 @@ describe('Command tests', () => {
             });
         });
     });
+
+    describe('asRoot', () => {
+        describe('successful', () => {
+            it('execute as root', () => {
+                const executable = 'echo';
+                const argument = 'echo me';
+                const command = new CommandHelper(executable, argument);
+
+                expect(command.executable).to.be.equal(executable);
+                expect(command.arguments.length).to.be.equal(1);
+                expect(command.arguments[0].argument).to.be.equal(`"${argument}"`);
+                expect(command.value).to.be.equal(`${executable} "${argument}"`);
+
+                /* Update to execute as root. */
+                command.asRoot;
+
+                expect(command.value).to.be.equal(`sudo ${executable} "${argument}"`);
+            });
+        });
+    });
+
+    describe('notAsRoot', () => {
+        describe('successful', () => {
+            it('execute as current user', () => {
+                const executable = 'echo';
+                const argument = 'echo me';
+                const command = new CommandHelper(executable, argument).asRoot;
+
+                expect(command.executable).to.be.equal(executable);
+                expect(command.arguments.length).to.be.equal(1);
+                expect(command.arguments[0].argument).to.be.equal(`"${argument}"`);
+                expect(command.value).to.be.equal(`sudo ${executable} "${argument}"`);
+
+                /* Update to execute as current user. */
+                command.notAsRoot;
+
+                expect(command.value).to.be.equal(`${executable} "${argument}"`);
+            });
+        });
+    });
+
+    describe('rootCommand', () => {
+        describe('successful', () => {
+            it('instance root command', () => {
+                const rootCommand = 'doas';
+                const executable = 'echo';
+                const argument = 'echo me';
+                const command = new CommandHelper(executable, argument).asRoot;
+
+                command.rootCommand(rootCommand);
+
+                expect(command.executable).to.be.equal(executable);
+                expect(command.arguments.length).to.be.equal(1);
+                expect(command.arguments[0].argument).to.be.equal(`"${argument}"`);
+                expect(command.value).to.be.equal(`${rootCommand} ${executable} "${argument}"`);
+            });
+
+            it('reset instance root command', () => {
+                const rootCommand = 'doas';
+                const executable = 'echo';
+                const argument = 'echo me';
+                const command = new CommandHelper(executable, argument).asRoot;
+
+                command.rootCommand(rootCommand);
+
+                expect(command.executable).to.be.equal(executable);
+                expect(command.arguments.length).to.be.equal(1);
+                expect(command.arguments[0].argument).to.be.equal(`"${argument}"`);
+                expect(command.value).to.be.equal(`${rootCommand} ${executable} "${argument}"`);
+
+                /* Reset root command. */
+                command.rootCommand();
+                expect(command.getRootCommand()).to.be.equal('sudo');
+            });
+
+            it('static root command', () => {
+                const rootCommand = 'doas';
+
+                Command.rootCommand(rootCommand); /* Set general root command. */
+
+                const executable = 'echo';
+                const argument = 'echo me';
+                const command = new CommandHelper(executable, argument).asRoot;
+
+                expect(command.executable).to.be.equal(executable);
+                expect(command.arguments.length).to.be.equal(1);
+                expect(command.arguments[0].argument).to.be.equal(`"${argument}"`);
+                expect(command.value).to.be.equal(`${rootCommand} ${executable} "${argument}"`);
+
+                /* Reset general root command. */
+                Command.rootCommand();
+                expect(Command.getRootCommand()).to.be.equal('sudo');
+            });
+
+            it('overwrite static root command', () => {
+                const rootCommand = 'doas';
+                const newRootCommand = 'pkexec';
+
+                Command.rootCommand(rootCommand); /* Set general root command. */
+
+                const executable = 'echo';
+                const argument = 'echo me';
+                const command = new CommandHelper(executable, argument).asRoot;
+
+                expect(command.executable).to.be.equal(executable);
+                expect(command.arguments.length).to.be.equal(1);
+                expect(command.arguments[0].argument).to.be.equal(`"${argument}"`);
+                expect(command.value).to.be.equal(`${rootCommand} ${executable} "${argument}"`);
+
+                /* Overwrite general root command. */
+                command.rootCommand(newRootCommand)
+
+                expect(command.value).to.be.equal(`${newRootCommand} ${executable} "${argument}"`);
+
+                /* Reset general root command. */
+                Command.rootCommand();
+                expect(Command.getRootCommand()).to.be.equal('sudo');
+            });
+        });
+
+        describe('failed', () => {
+            it('invalid root command type provided', () => {
+                expect(function() {
+                    new CommandHelper('echo', 'echo me').rootCommand({} as any);
+                }).to.throw('Invalid root command type provided');
+            });
+        });
+    });
 });

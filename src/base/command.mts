@@ -124,6 +124,24 @@ export class Command extends Statement {
     }
 
     /**
+     * Returns the general root command.
+     *
+     * @returns Root command string.
+     */
+    public static getRootCommand(): string {
+        return Command._rootCommand;
+    }
+
+    /**
+     * Returns the instance' root command.
+     *
+     * @returns Root command string.
+     */
+    public getRootCommand(): string {
+        return this._rootCommand;
+    }
+
+    /**
      * Returns the executable string.
      */
     public get executable(): string {
@@ -139,14 +157,16 @@ export class Command extends Statement {
 
     /**
      * Sets the command to be executed as root.
-     * 
-     * @param executeAsRoot If true, the command is executed as root.
      */
-    public asRoot(executeAsRoot=true): this {
-        this._executeAsRoot = !!executeAsRoot;
-        this._updateStatement();
+    public get asRoot(): this {
+        return this._asRoot(true);
+    }
 
-        return this;
+    /**
+     * Sets the command to be executed as current user.
+     */
+    public get notAsRoot(): this {
+        return this._asRoot(false);
     }
 
     /**
@@ -154,9 +174,9 @@ export class Command extends Statement {
      *
      * @param command Root command (e.g. sudo)-
      */
-    public rootCommand(command: string): this {
-        this._rootCommand = command || Command._DEFAULT_ROOT_COMMAND;
-        return this;
+    public rootCommand(command?: string): this {
+        this._rootCommand = Command._convertRootCommand(command, Command._rootCommand);
+        return this._updateStatement();
     }
 
     /**
@@ -164,15 +184,44 @@ export class Command extends Statement {
      *
      * @param command Root command (e.g. sudo)-
      */
-    public static rootCommand(command: string): void {
-        this._rootCommand = command || Command._DEFAULT_ROOT_COMMAND;
+    public static rootCommand(command?: string): void {
+        Command._rootCommand = Command._convertRootCommand(command, Command._DEFAULT_ROOT_COMMAND);
+    }
+
+    /**
+     * Makes sure that passed root command is valid.
+     *
+     * @param command Root command (e.g. sudo)-
+     */
+    private static _convertRootCommand(command: string, defaultCommand: string): string {
+        command = convertToString(command, (e: ConvertToStringError) => {
+            switch(e) {
+                case ConvertToStringError.InvalidType: throw new Error('Invalid root command type provided');
+            }
+        }, { emptyAllowed: true });
+
+        return command || defaultCommand;
     }
 
     /**
      * Updates the Statement's value.
      */
-    private _updateStatement(): void {
+    private _updateStatement(): this {
         const rootPart = this._executeAsRoot ? `${this._rootCommand} ` : '';
+        
         this.value = `${rootPart}${this.executable} ${this.arguments.map((command) => command.argument).join(' ')}`;
+        return this;
+    }
+
+    /**
+     * Sets the command to be executed as root or not as root
+     * 
+     * @param executeAsRoot If true, the command is executed as root.
+     */
+    private _asRoot(executeAsRoot=true): this {
+        this._executeAsRoot = !!executeAsRoot;
+        this._updateStatement();
+
+        return this;
     }
 }
