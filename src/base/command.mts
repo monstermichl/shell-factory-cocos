@@ -15,6 +15,12 @@ import {
  * Represents a Bourne Shell command.
  */
 export class Command extends Statement {
+    private static readonly _DEFAULT_ROOT_COMMAND = 'sudo';
+
+    private static _rootCommand = Command._DEFAULT_ROOT_COMMAND;
+
+    private _rootCommand = Command._rootCommand;
+    private _executeAsRoot = false;
     private _executable: string;
     private _arguments = [] as ArgumentBase[];
 
@@ -109,10 +115,12 @@ export class Command extends Statement {
             }
             previousArg = arg as string | Argument;
         });
-        super(`${executable} ${convertedArgs.map((command) => command.argument).join(' ')}`);
+        super();
 
         this._executable = executable;
         this._arguments = convertedArgs;
+
+        this._updateStatement();
     }
 
     /**
@@ -127,5 +135,44 @@ export class Command extends Statement {
      */
     public get arguments(): ArgumentBase[] {
         return this._arguments;
+    }
+
+    /**
+     * Sets the command to be executed as root.
+     * 
+     * @param executeAsRoot If true, the command is executed as root.
+     */
+    public asRoot(executeAsRoot=true): this {
+        this._executeAsRoot = !!executeAsRoot;
+        this._updateStatement();
+
+        return this;
+    }
+
+    /**
+     * Sets the root-command for the current instance.
+     *
+     * @param command Root command (e.g. sudo)-
+     */
+    public rootCommand(command: string): this {
+        this._rootCommand = command || Command._DEFAULT_ROOT_COMMAND;
+        return this;
+    }
+
+    /**
+     * Sets the root-command for all future instances.
+     *
+     * @param command Root command (e.g. sudo)-
+     */
+    public static rootCommand(command: string): void {
+        this._rootCommand = command || Command._DEFAULT_ROOT_COMMAND;
+    }
+
+    /**
+     * Updates the Statement's value.
+     */
+    private _updateStatement(): void {
+        const rootPart = this._executeAsRoot ? `${this._rootCommand} ` : '';
+        this.value = `${rootPart}${this.executable} ${this.arguments.map((command) => command.argument).join(' ')}`;
     }
 }
