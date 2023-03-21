@@ -16,6 +16,7 @@ describe('Command tests', () => {
                 const argument = 'echo me';
                 const command = new CommandHelper(executable, argument);
 
+                expect(command.executable).to.be.equal(executable);
                 expect(command.arguments.length).to.be.equal(1);
                 expect(command.arguments[0].argument).to.be.equal(`"${argument}"`);
                 expect(command.value).to.be.equal(`${executable} "${argument}"`);
@@ -74,6 +75,20 @@ describe('Command tests', () => {
                 expect(command.arguments.length).to.be.equal(1);
                 expect(command.arguments[0]).to.be.equal(argument);
                 expect(command.value).to.be.equal(`${executable} ${argument.argument}`);
+            });
+        });
+
+        describe('failed', () => {
+            it('invalid executable type provided', () => {
+                expect(function() {
+                    new CommandHelper({} as any);
+                }).to.throw('Invalid executable type provided');
+            });
+            
+            it('no executable provided', () => {
+                expect(function() {
+                    new CommandHelper(undefined as any);
+                }).to.throw('No executable provided');
             });
         });
     });
