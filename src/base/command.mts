@@ -4,24 +4,64 @@ import {
     convertToString,
     wrapInQuotes,
 } from 'shell-factory/dist/helpers/string.mjs';
+import { ArgumentBase } from './argument-base.mjs';
 import { Argument } from './argument.mjs';
 import {
     SwitchArgument,
     SwitchType,
 } from './switch-argument.mjs';
 
+/**
+ * Represents a Bourne Shell command.
+ */
 export abstract class Command extends Statement {
     private _executable: string;
-    private _arguments = [] as Argument[];
+    private _arguments = [] as ArgumentBase[];
 
+    /**
+     * Command constructor.
+     *
+     * @param executable Command to execute.
+     * @param args       Command arguments.
+     */
     constructor(executable: string, ...args: string[]);
+    /**
+     * Command constructor.
+     *
+     * @param executable Command to execute.
+     * @param args       Command arguments.
+     */
     constructor(executable: string, ...args: number[]);
+    /**
+     * Command constructor.
+     *
+     * @param executable Command to execute.
+     * @param args       Command arguments.
+     */
     constructor(executable: string, ...args: boolean[]);
+    /**
+     * Command constructor.
+     *
+     * @param executable Command to execute.
+     * @param args       Command arguments.
+     */
     constructor(executable: string, ...args: Argument[]);
+    /**
+     * Command constructor.
+     *
+     * @param executable Command to execute.
+     * @param args       Command arguments.
+     */
     constructor(executable: string, ...args: SwitchArgument[]);
+    /**
+     * Command constructor.
+     *
+     * @param executable Command to execute.
+     * @param args       Command arguments.
+     */
     constructor(executable: string, ...args: (string | number | boolean | Argument | SwitchArgument)[]);
     constructor(executable: string, ...args: unknown[]) {
-        const convertedArgs = [] as Argument[];
+        const convertedArgs = [] as ArgumentBase[];
 
         let previousArg: string | Argument;
         let previousArgSwitchType: SwitchType;
@@ -38,16 +78,10 @@ export abstract class Command extends Statement {
         /* Interpret arguments. */
         args?.forEach((arg, index) => {
             /* If value is not already Argument instance, evaluate what it is. */
-            if (!(arg instanceof Argument)) {
-                /* Consider argument as value. If it's a switch it
-                   will not have whitespaces and thefore will not
-                   be wrapped in quotes. Afterwards it can be
-                   trimmed. */
-                arg = Argument.convertValue(arg).trim();
-
+            if (!(arg instanceof ArgumentBase)) {
                 /* Evaluate if value is a switch. */
                 const switchType = SwitchArgument.evaluateSwitch(arg as string);
-                
+
                 /* If current argument is considered a value. */
                 if (!switchType) {
                     /* If previous argument was switch, create a SwitchArgument. */
@@ -91,7 +125,7 @@ export abstract class Command extends Statement {
     /**
      * Returns the arguments list.
      */
-    public get arguments(): Argument[] {
+    public get arguments(): ArgumentBase[] {
         return this._arguments;
     }
 }
