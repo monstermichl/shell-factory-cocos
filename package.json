@@ -1,5 +1,5 @@
 {
-  "name": "shell-factory-coco",
+  "name": "shell-factory-cocos",
   "version": "1.0.0",
   "description": "Common commands collection for shell-factory",
   "main": "./dist/index.mjs",
