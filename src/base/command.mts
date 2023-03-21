@@ -14,7 +14,7 @@ import {
 /**
  * Represents a Bourne Shell command.
  */
-export abstract class Command extends Statement {
+export class Command extends Statement {
     private _executable: string;
     private _arguments = [] as ArgumentBase[];
 
