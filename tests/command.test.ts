@@ -1,20 +1,20 @@
 import { expect } from 'chai';
 import { Argument } from '../src/base/argument.mjs';
-import { Command } from '../src/base/command.mjs';
+import { ExecutableCommand } from '../src/base/executable-command.mjs';
 import { SwitchArgument } from '../src/base/switch-argument.mjs';
 
-/* Helper class to instantiate Command. */
-class CommandHelper extends Command {
+/* Helper class to instantiate CommonCommand. */
+class ExecutableCommandHelper extends ExecutableCommand {
     /* Nothing to do. */
 }
 
-describe('Command tests', () => {
+describe('ExecutbleCommand tests', () => {
     describe('constructor', () => {
         describe('successful', () => {
             it('simple argument', () => {
                 const executable = 'echo';
                 const argument = 'echo me';
-                const command = new CommandHelper(executable, argument);
+                const command = new ExecutableCommandHelper(executable, argument);
 
                 expect(command.executable).to.be.equal(executable);
                 expect(command.arguments.length).to.be.equal(1);
@@ -26,7 +26,7 @@ describe('Command tests', () => {
                 const executable = 'echo';
                 const key = '-v';
                 const argument = 'echo me';
-                const command = new CommandHelper(executable, key, argument);
+                const command = new ExecutableCommandHelper(executable, key, argument);
                 
                 expect(command.arguments.length).to.be.equal(1);
                 expect(command.arguments[0].argument).to.be.equal(`${key} "${argument}"`);
@@ -36,7 +36,7 @@ describe('Command tests', () => {
             it('one key', () => {
                 const executable = 'echo';
                 const key = '-v';
-                const command = new CommandHelper(executable, key);
+                const command = new ExecutableCommandHelper(executable, key);
                 
                 expect(command.arguments.length).to.be.equal(1);
                 expect(command.arguments[0].argument).to.be.equal(key);
@@ -47,7 +47,7 @@ describe('Command tests', () => {
                 const executable = 'echo';
                 const key1 = '-v';
                 const key2 = '-o';
-                const command = new CommandHelper(executable, key1, key2);
+                const command = new ExecutableCommandHelper(executable, key1, key2);
                 
                 expect(command.arguments.length).to.be.equal(2);
                 
@@ -60,7 +60,7 @@ describe('Command tests', () => {
             it('argument', () => {
                 const executable = 'echo';
                 const argument = new Argument('arg1');
-                const command = new CommandHelper(executable, argument);
+                const command = new ExecutableCommandHelper(executable, argument);
                 
                 expect(command.arguments.length).to.be.equal(1);
                 expect(command.arguments[0]).to.be.equal(argument);
@@ -70,7 +70,7 @@ describe('Command tests', () => {
             it('switch-argument', () => {
                 const executable = 'echo';
                 const argument = new SwitchArgument('-v', 6);
-                const command = new CommandHelper(executable, argument);
+                const command = new ExecutableCommandHelper(executable, argument);
                 
                 expect(command.arguments.length).to.be.equal(1);
                 expect(command.arguments[0]).to.be.equal(argument);
@@ -81,13 +81,13 @@ describe('Command tests', () => {
         describe('failed', () => {
             it('invalid executable type provided', () => {
                 expect(function() {
-                    new CommandHelper({} as any);
+                    new ExecutableCommandHelper({} as any);
                 }).to.throw('Invalid executable type provided');
             });
             
             it('no executable provided', () => {
                 expect(function() {
-                    new CommandHelper(undefined as any);
+                    new ExecutableCommandHelper(undefined as any);
                 }).to.throw('No executable provided');
             });
         });
@@ -98,7 +98,7 @@ describe('Command tests', () => {
             it('execute as root', () => {
                 const executable = 'echo';
                 const argument = 'echo me';
-                const command = new CommandHelper(executable, argument);
+                const command = new ExecutableCommandHelper(executable, argument);
 
                 expect(command.executable).to.be.equal(executable);
                 expect(command.arguments.length).to.be.equal(1);
@@ -118,7 +118,7 @@ describe('Command tests', () => {
             it('execute as current user', () => {
                 const executable = 'echo';
                 const argument = 'echo me';
-                const command = new CommandHelper(executable, argument).asRoot;
+                const command = new ExecutableCommandHelper(executable, argument).asRoot;
 
                 expect(command.executable).to.be.equal(executable);
                 expect(command.arguments.length).to.be.equal(1);
@@ -139,7 +139,7 @@ describe('Command tests', () => {
                 const rootCommand = 'doas';
                 const executable = 'echo';
                 const argument = 'echo me';
-                const command = new CommandHelper(executable, argument).asRoot;
+                const command = new ExecutableCommandHelper(executable, argument).asRoot;
 
                 command.rootCommand(rootCommand);
 
@@ -153,7 +153,7 @@ describe('Command tests', () => {
                 const rootCommand = 'doas';
                 const executable = 'echo';
                 const argument = 'echo me';
-                const command = new CommandHelper(executable, argument).asRoot;
+                const command = new ExecutableCommandHelper(executable, argument).asRoot;
 
                 command.rootCommand(rootCommand);
 
@@ -170,11 +170,11 @@ describe('Command tests', () => {
             it('static root command', () => {
                 const rootCommand = 'doas';
 
-                Command.rootCommand(rootCommand); /* Set general root command. */
+                ExecutableCommand.rootCommand(rootCommand); /* Set general root command. */
 
                 const executable = 'echo';
                 const argument = 'echo me';
-                const command = new CommandHelper(executable, argument).asRoot;
+                const command = new ExecutableCommandHelper(executable, argument).asRoot;
 
                 expect(command.executable).to.be.equal(executable);
                 expect(command.arguments.length).to.be.equal(1);
@@ -182,19 +182,19 @@ describe('Command tests', () => {
                 expect(command.value).to.be.equal(`${rootCommand} ${executable} "${argument}"`);
 
                 /* Reset general root command. */
-                Command.rootCommand();
-                expect(Command.getRootCommand()).to.be.equal('sudo');
+                ExecutableCommand.rootCommand();
+                expect(ExecutableCommand.getRootCommand()).to.be.equal('sudo');
             });
 
             it('overwrite static root command', () => {
                 const rootCommand = 'doas';
                 const newRootCommand = 'pkexec';
 
-                Command.rootCommand(rootCommand); /* Set general root command. */
+                ExecutableCommand.rootCommand(rootCommand); /* Set general root command. */
 
                 const executable = 'echo';
                 const argument = 'echo me';
-                const command = new CommandHelper(executable, argument).asRoot;
+                const command = new ExecutableCommandHelper(executable, argument).asRoot;
 
                 expect(command.executable).to.be.equal(executable);
                 expect(command.arguments.length).to.be.equal(1);
@@ -207,15 +207,15 @@ describe('Command tests', () => {
                 expect(command.value).to.be.equal(`${newRootCommand} ${executable} "${argument}"`);
 
                 /* Reset general root command. */
-                Command.rootCommand();
-                expect(Command.getRootCommand()).to.be.equal('sudo');
+                ExecutableCommand.rootCommand();
+                expect(ExecutableCommand.getRootCommand()).to.be.equal('sudo');
             });
         });
 
         describe('failed', () => {
             it('invalid root command type provided', () => {
                 expect(function() {
-                    new CommandHelper('echo', 'echo me').rootCommand({} as any);
+                    new ExecutableCommandHelper('echo', 'echo me').rootCommand({} as any);
                 }).to.throw('Invalid root command type provided');
             });
         });

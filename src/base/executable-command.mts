@@ -1,4 +1,4 @@
-import { Statement } from 'shell-factory';
+import { Command } from 'shell-factory';
 import {
     ConvertToStringError,
     convertToString,
@@ -12,58 +12,58 @@ import {
 } from './switch-argument.mjs';
 
 /**
- * Represents a Bourne Shell command.
+ * Represents a Bourne Shell executable call.
  */
-export class Command extends Statement {
+export class ExecutableCommand extends Command {
     private static readonly _DEFAULT_ROOT_COMMAND = 'sudo';
 
-    private static _rootCommand = Command._DEFAULT_ROOT_COMMAND;
+    private static _rootCommand = ExecutableCommand._DEFAULT_ROOT_COMMAND;
 
-    private _rootCommand = Command._rootCommand;
+    private _rootCommand = ExecutableCommand._rootCommand;
     private _executeAsRoot = false;
     private _executable: string;
     private _arguments = [] as ArgumentBase[];
 
     /**
-     * Command constructor.
+     * CommonCommand constructor.
      *
-     * @param executable Command to execute.
-     * @param args       Command arguments.
+     * @param executable CommonCommand to execute.
+     * @param args       CommonCommand arguments.
      */
     constructor(executable: string, ...args: string[]);
     /**
-     * Command constructor.
+     * CommonCommand constructor.
      *
-     * @param executable Command to execute.
-     * @param args       Command arguments.
+     * @param executable CommonCommand to execute.
+     * @param args       CommonCommand arguments.
      */
     constructor(executable: string, ...args: number[]);
     /**
-     * Command constructor.
+     * CommonCommand constructor.
      *
-     * @param executable Command to execute.
-     * @param args       Command arguments.
+     * @param executable CommonCommand to execute.
+     * @param args       CommonCommand arguments.
      */
     constructor(executable: string, ...args: boolean[]);
     /**
-     * Command constructor.
+     * CommonCommand constructor.
      *
-     * @param executable Command to execute.
-     * @param args       Command arguments.
+     * @param executable CommonCommand to execute.
+     * @param args       CommonCommand arguments.
      */
     constructor(executable: string, ...args: Argument[]);
     /**
-     * Command constructor.
+     * CommonCommand constructor.
      *
-     * @param executable Command to execute.
-     * @param args       Command arguments.
+     * @param executable CommonCommand to execute.
+     * @param args       CommonCommand arguments.
      */
     constructor(executable: string, ...args: SwitchArgument[]);
     /**
-     * Command constructor.
+     * CommonCommand constructor.
      *
-     * @param executable Command to execute.
-     * @param args       Command arguments.
+     * @param executable CommonCommand to execute.
+     * @param args       CommonCommand arguments.
      */
     constructor(executable: string, ...args: (string | number | boolean | Argument | SwitchArgument)[]);
     constructor(executable: string, ...args: unknown[]) {
@@ -129,7 +129,7 @@ export class Command extends Statement {
      * @returns Root command string.
      */
     public static getRootCommand(): string {
-        return Command._rootCommand;
+        return ExecutableCommand._rootCommand;
     }
 
     /**
@@ -175,7 +175,7 @@ export class Command extends Statement {
      * @param command Root command (e.g. sudo)-
      */
     public rootCommand(command?: string): this {
-        this._rootCommand = Command._convertRootCommand(command, Command._rootCommand);
+        this._rootCommand = ExecutableCommand._convertRootCommand(command, ExecutableCommand._rootCommand);
         return this._updateStatement();
     }
 
@@ -185,7 +185,7 @@ export class Command extends Statement {
      * @param command Root command (e.g. sudo)-
      */
     public static rootCommand(command?: string): void {
-        Command._rootCommand = Command._convertRootCommand(command, Command._DEFAULT_ROOT_COMMAND);
+        ExecutableCommand._rootCommand = ExecutableCommand._convertRootCommand(command, ExecutableCommand._DEFAULT_ROOT_COMMAND);
     }
 
     /**
@@ -209,7 +209,7 @@ export class Command extends Statement {
     private _updateStatement(): this {
         const rootPart = this._executeAsRoot ? `${this._rootCommand} ` : '';
         
-        this.value = `${rootPart}${this.executable} ${this.arguments.map((command) => command.argument).join(' ')}`;
+        this.statement = `${rootPart}${this.executable} ${this.arguments.map((command) => command.argument).join(' ')}`;
         return this;
     }
 
