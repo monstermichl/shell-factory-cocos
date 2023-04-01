@@ -14,7 +14,7 @@ import {
     echo,
     grep,
     sed,
-} from '../dist/index.mjs';
+} from 'shell-factory-cocos';
 
 const script = new Script([
     echo('Hello World'),
