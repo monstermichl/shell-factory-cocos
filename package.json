@@ -8,9 +8,10 @@
   "scripts": {
     "build": "npx tsc",
     "test": "npx tsc -p tsconfig-tests.json && npx c8 -r html mocha ./tests-build/tests/*.test.js",
-    "testCleanup": "rm -rf ./tests-build",
-    "testAndCleanup": "npm run test; npm run testCleanup",
+    "test-cleanup": "rm -rf ./tests-build",
+    "test-n-cleanup": "npm run test; npm run test-cleanup",
     "lint": "npx eslint .",
+    "generate-docs": "npx typedoc",
     "example": "npm run build && node ./examples/example.js"
   },
   "author": "monstermichl",
