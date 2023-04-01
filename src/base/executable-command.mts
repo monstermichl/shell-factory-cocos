@@ -1,9 +1,9 @@
 import { Command } from 'shell-factory';
 import {
-    ConvertToStringError,
     convertToString,
+    ConvertToStringError,
     wrapInQuotes,
-} from 'shell-factory/dist/helpers/string.mjs';
+} from 'shell-factory/helpers';
 import { ArgumentBase } from './argument-base.mjs';
 import { Argument } from './argument.mjs';
 import {

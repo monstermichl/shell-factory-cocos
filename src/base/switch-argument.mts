@@ -1,7 +1,7 @@
 import {
-    ConvertToStringError,
     convertToString,
-} from 'shell-factory/dist/helpers/string.mjs';
+    ConvertToStringError,
+} from 'shell-factory/helpers';
 import { ArgumentBase } from './argument-base.mjs';
 
 /**

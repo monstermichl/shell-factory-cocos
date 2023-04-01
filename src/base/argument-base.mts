@@ -1,8 +1,8 @@
 import {
-    ConvertToStringError,
     convertToString,
+    ConvertToStringError,
     wrapInQuotes,
-} from 'shell-factory/dist/helpers/string.mjs';
+} from 'shell-factory/helpers';
 
 /**
  * Serves as the base for argument classes.
