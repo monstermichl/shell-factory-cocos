@@ -1,0 +1,1339 @@
+<!DOCTYPE html><html class="default" lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>ExecutableCommand | shell-factory-cocos</title><meta name="description" content="Documentation for shell-factory-cocos"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="../assets/style.css"/><link rel="stylesheet" href="../assets/highlight.css"/><script async src="../assets/search.js" id="search-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os"</script><header class="tsd-page-toolbar">
+<div class="tsd-toolbar-contents container">
+<div class="table-cell" id="tsd-search" data-base="..">
+<div class="field"><label for="tsd-search-field" class="tsd-widget tsd-toolbar-icon search no-caption"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M15.7824 13.833L12.6666 10.7177C12.5259 10.5771 12.3353 10.499 12.1353 10.499H11.6259C12.4884 9.39596 13.001 8.00859 13.001 6.49937C13.001 2.90909 10.0914 0 6.50048 0C2.90959 0 0 2.90909 0 6.49937C0 10.0896 2.90959 12.9987 6.50048 12.9987C8.00996 12.9987 9.39756 12.4863 10.5008 11.6239V12.1332C10.5008 12.3332 10.5789 12.5238 10.7195 12.6644L13.8354 15.7797C14.1292 16.0734 14.6042 16.0734 14.8948 15.7797L15.7793 14.8954C16.0731 14.6017 16.0731 14.1267 15.7824 13.833ZM6.50048 10.499C4.29094 10.499 2.50018 8.71165 2.50018 6.49937C2.50018 4.29021 4.28781 2.49976 6.50048 2.49976C8.71001 2.49976 10.5008 4.28708 10.5008 6.49937C10.5008 8.70852 8.71314 10.499 6.50048 10.499Z" fill="var(--color-text)"></path></svg></label><input type="text" id="tsd-search-field" aria-label="Search"/></div>
+<div class="field">
+<div id="tsd-toolbar-links"></div></div>
+<ul class="results">
+<li class="state loading">Preparing search index...</li>
+<li class="state failure">The search index is not available</li></ul><a href="../index.html" class="title">shell-factory-cocos</a></div>
+<div class="table-cell" id="tsd-widgets"><a href="#" class="tsd-widget tsd-toolbar-icon menu no-caption" data-toggle="menu" aria-label="Menu"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="1" y="3" width="14" height="2" fill="var(--color-text)"></rect><rect x="1" y="7" width="14" height="2" fill="var(--color-text)"></rect><rect x="1" y="11" width="14" height="2" fill="var(--color-text)"></rect></svg></a></div></div></header>
+<div class="container container-main">
+<div class="col-8 col-content">
+<div class="tsd-page-title">
+<ul class="tsd-breadcrumb">
+<li><a href="../modules.html">shell-factory-cocos</a></li>
+<li><a href="ExecutableCommand.html">ExecutableCommand</a></li></ul>
+<h1>Class ExecutableCommand</h1></div>
+<section class="tsd-panel tsd-comment">
+<div class="tsd-comment tsd-typography"><p>Represents a Bourne Shell executable call.</p>
+</div></section>
+<section class="tsd-panel tsd-hierarchy">
+<h4>Hierarchy</h4>
+<ul class="tsd-hierarchy">
+<li><span class="tsd-signature-type">Command</span>
+<ul class="tsd-hierarchy">
+<li><span class="target">ExecutableCommand</span></li></ul></li></ul></section><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/monstermichl/shell-factory-coco/blob/ffd61cc/src/base/executable-command.mts#L17">src/base/executable-command.mts:17</a></li></ul></aside>
+<section class="tsd-panel-group tsd-index-group">
+<section class="tsd-panel tsd-index-panel">
+<details class="tsd-index-content tsd-index-accordion" open><summary class="tsd-accordion-summary tsd-index-summary">
+<h5 class="tsd-index-heading uppercase" role="button" aria-expanded="false" tabIndex=0><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M1.5 5.50969L8 11.6609L14.5 5.50969L12.5466 3.66086L8 7.96494L3.45341 3.66086L1.5 5.50969Z" fill="var(--color-text)"></path></svg> Index</h5></summary>
+<div class="tsd-accordion-details">
+<section class="tsd-index-section">
+<h3 class="tsd-index-heading">Constructors</h3>
+<div class="tsd-index-list"><a href="ExecutableCommand.html#constructor" class="tsd-index-link tsd-kind-constructor tsd-parent-kind-class"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><rect fill="var(--color-icon-background)" stroke="#4D7FFF" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="12" id="icon-512-path"></rect><path d="M11.898 16.1201C11.098 16.1201 10.466 15.8961 10.002 15.4481C9.53803 15.0001 9.30603 14.3841 9.30603 13.6001V9.64012C9.30603 8.85612 9.53803 8.24012 10.002 7.79212C10.466 7.34412 11.098 7.12012 11.898 7.12012C12.682 7.12012 13.306 7.34812 13.77 7.80412C14.234 8.25212 14.466 8.86412 14.466 9.64012H13.386C13.386 9.14412 13.254 8.76412 12.99 8.50012C12.734 8.22812 12.37 8.09212 11.898 8.09212C11.426 8.09212 11.054 8.22412 10.782 8.48812C10.518 8.75212 10.386 9.13212 10.386 9.62812V13.6001C10.386 14.0961 10.518 14.4801 10.782 14.7521C11.054 15.0161 11.426 15.1481 11.898 15.1481C12.37 15.1481 12.734 15.0161 12.99 14.7521C13.254 14.4801 13.386 14.0961 13.386 13.6001H14.466C14.466 14.3761 14.234 14.9921 13.77 15.4481C13.306 15.8961 12.682 16.1201 11.898 16.1201Z" fill="var(--color-text)" id="icon-512-text"></path></svg><span>constructor</span></a>
+</div></section>
+<section class="tsd-index-section">
+<h3 class="tsd-index-heading">Properties</h3>
+<div class="tsd-index-list"><a href="ExecutableCommand.html#_arguments" class="tsd-index-link tsd-kind-property tsd-parent-kind-class tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><rect fill="var(--color-icon-background)" stroke="#FF984D" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="12" id="icon-1024-path"></rect><path d="M9.354 16V7.24H12.174C12.99 7.24 13.638 7.476 14.118 7.948C14.606 8.412 14.85 9.036 14.85 9.82C14.85 10.604 14.606 11.232 14.118 11.704C13.638 12.168 12.99 12.4 12.174 12.4H10.434V16H9.354ZM10.434 11.428H12.174C12.646 11.428 13.022 11.284 13.302 10.996C13.59 10.7 13.734 10.308 13.734 9.82C13.734 9.324 13.59 8.932 13.302 8.644C13.022 8.356 12.646 8.212 12.174 8.212H10.434V11.428Z" fill="var(--color-text)" id="icon-1024-text"></path></svg><span>_arguments</span></a>
+<a href="ExecutableCommand.html#_chain" class="tsd-index-link tsd-kind-property tsd-parent-kind-class tsd-is-protected tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>_chain</span></a>
+<a href="ExecutableCommand.html#_executable" class="tsd-index-link tsd-kind-property tsd-parent-kind-class tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>_executable</span></a>
+<a href="ExecutableCommand.html#_executeAsRoot" class="tsd-index-link tsd-kind-property tsd-parent-kind-class tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>_execute<wbr/>As<wbr/>Root</span></a>
+<a href="ExecutableCommand.html#_rootCommand" class="tsd-index-link tsd-kind-property tsd-parent-kind-class tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>_root<wbr/>Command</span></a>
+<a href="ExecutableCommand.html#_statement" class="tsd-index-link tsd-kind-property tsd-parent-kind-class tsd-is-protected tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>_statement</span></a>
+<a href="ExecutableCommand.html#_DEFAULT_ROOT_COMMAND" class="tsd-index-link tsd-kind-property tsd-parent-kind-class tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>_DEFAULT_<wbr/>ROOT_<wbr/>COMMAND</span></a>
+<a href="ExecutableCommand.html#_rootCommand-1" class="tsd-index-link tsd-kind-property tsd-parent-kind-class tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>_root<wbr/>Command</span></a>
+</div></section>
+<section class="tsd-index-section">
+<h3 class="tsd-index-heading">Accessors</h3>
+<div class="tsd-index-list"><a href="ExecutableCommand.html#arguments" class="tsd-index-link tsd-kind-accessor tsd-parent-kind-class"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><rect fill="var(--color-icon-background)" stroke="#FF4D4D" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="12" id="icon-262144-path"></rect><path d="M8.85 16L11.13 7.24H12.582L14.85 16H13.758L13.182 13.672H10.53L9.954 16H8.85ZM10.746 12.76H12.954L12.282 10.06C12.154 9.548 12.054 9.12 11.982 8.776C11.91 8.432 11.866 8.208 11.85 8.104C11.834 8.208 11.79 8.432 11.718 8.776C11.646 9.12 11.546 9.544 11.418 10.048L10.746 12.76Z" fill="var(--color-text)" id="icon-262144-text"></path></svg><span>arguments</span></a>
+<a href="ExecutableCommand.html#asRoot" class="tsd-index-link tsd-kind-accessor tsd-parent-kind-class"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-262144-path"></use><use href="#icon-262144-text"></use></svg><span>as<wbr/>Root</span></a>
+<a href="ExecutableCommand.html#chain" class="tsd-index-link tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-262144-path"></use><use href="#icon-262144-text"></use></svg><span>chain</span></a>
+<a href="ExecutableCommand.html#comment" class="tsd-index-link tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-262144-path"></use><use href="#icon-262144-text"></use></svg><span>comment</span></a>
+<a href="ExecutableCommand.html#executable" class="tsd-index-link tsd-kind-accessor tsd-parent-kind-class"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-262144-path"></use><use href="#icon-262144-text"></use></svg><span>executable</span></a>
+<a href="ExecutableCommand.html#id" class="tsd-index-link tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-262144-path"></use><use href="#icon-262144-text"></use></svg><span>id</span></a>
+<a href="ExecutableCommand.html#notAsRoot" class="tsd-index-link tsd-kind-accessor tsd-parent-kind-class"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-262144-path"></use><use href="#icon-262144-text"></use></svg><span>not<wbr/>As<wbr/>Root</span></a>
+<a href="ExecutableCommand.html#statement" class="tsd-index-link tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-262144-path"></use><use href="#icon-262144-text"></use></svg><span>statement</span></a>
+<a href="ExecutableCommand.html#value" class="tsd-index-link tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-262144-path"></use><use href="#icon-262144-text"></use></svg><span>value</span></a>
+</div></section>
+<section class="tsd-index-section">
+<h3 class="tsd-index-heading">Methods</h3>
+<div class="tsd-index-list"><a href="ExecutableCommand.html#_asRoot" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><rect fill="var(--color-icon-background)" stroke="#FF4DB8" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="12" id="icon-2048-path"></rect><path d="M9.162 16V7.24H10.578L11.514 10.072C11.602 10.328 11.674 10.584 11.73 10.84C11.794 11.088 11.842 11.28 11.874 11.416C11.906 11.28 11.954 11.088 12.018 10.84C12.082 10.584 12.154 10.324 12.234 10.06L13.122 7.24H14.538V16H13.482V12.82C13.482 12.468 13.49 12.068 13.506 11.62C13.53 11.172 13.558 10.716 13.59 10.252C13.622 9.78 13.654 9.332 13.686 8.908C13.726 8.476 13.762 8.1 13.794 7.78L12.366 12.16H11.334L9.894 7.78C9.934 8.092 9.97 8.456 10.002 8.872C10.042 9.28 10.078 9.716 10.11 10.18C10.142 10.636 10.166 11.092 10.182 11.548C10.206 12.004 10.218 12.428 10.218 12.82V16H9.162Z" fill="var(--color-text)" id="icon-2048-text"></path></svg><span>_as<wbr/>Root</span></a>
+<a href="ExecutableCommand.html#_updateStatement" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>_update<wbr/>Statement</span></a>
+<a href="ExecutableCommand.html#and" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>and</span></a>
+<a href="ExecutableCommand.html#append" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>append</span></a>
+<a href="ExecutableCommand.html#clearChain" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>clear<wbr/>Chain</span></a>
+<a href="ExecutableCommand.html#clearComment" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>clear<wbr/>Comment</span></a>
+<a href="ExecutableCommand.html#compareIdOrPattern" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>compare<wbr/>Id<wbr/>Or<wbr/>Pattern</span></a>
+<a href="ExecutableCommand.html#eval" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>eval</span></a>
+<a href="ExecutableCommand.html#findInChain" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>find<wbr/>In<wbr/>Chain</span></a>
+<a href="ExecutableCommand.html#getRootCommand" class="tsd-index-link tsd-kind-method tsd-parent-kind-class"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>get<wbr/>Root<wbr/>Command</span></a>
+<a href="ExecutableCommand.html#meta" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>meta</span></a>
+<a href="ExecutableCommand.html#or" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>or</span></a>
+<a href="ExecutableCommand.html#pipe" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>pipe</span></a>
+<a href="ExecutableCommand.html#read" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>read</span></a>
+<a href="ExecutableCommand.html#removeFromChain" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>remove<wbr/>From<wbr/>Chain</span></a>
+<a href="ExecutableCommand.html#rootCommand" class="tsd-index-link tsd-kind-method tsd-parent-kind-class"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>root<wbr/>Command</span></a>
+<a href="ExecutableCommand.html#setComment" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>set<wbr/>Comment</span></a>
+<a href="ExecutableCommand.html#subshell" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>subshell</span></a>
+<a href="ExecutableCommand.html#write" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>write</span></a>
+<a href="ExecutableCommand.html#_convertRootCommand" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>_convert<wbr/>Root<wbr/>Command</span></a>
+<a href="ExecutableCommand.html#compareIdOrPattern-3" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>compare<wbr/>Id<wbr/>Or<wbr/>Pattern</span></a>
+<a href="ExecutableCommand.html#convert" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>convert</span></a>
+<a href="ExecutableCommand.html#getRootCommand-2" class="tsd-index-link tsd-kind-method tsd-parent-kind-class"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>get<wbr/>Root<wbr/>Command</span></a>
+<a href="ExecutableCommand.html#rootCommand-2" class="tsd-index-link tsd-kind-method tsd-parent-kind-class"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>root<wbr/>Command</span></a>
+</div></section></div></details></section></section>
+<section class="tsd-panel-group tsd-member-group">
+<h2>Constructors</h2>
+<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class"><a id="constructor" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>constructor</span><a href="#constructor" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none" id="icon-anchor-a"></path><path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" id="icon-anchor-b"></path><path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" id="icon-anchor-c"></path></svg></a></h3>
+<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
+<li class="tsd-signature tsd-anchor-link" id="constructor.new_ExecutableCommand">new <wbr/>Executable<wbr/>Command<span class="tsd-signature-symbol">(</span>executable<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, <span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="ExecutableCommand.html" class="tsd-signature-type" data-tsd-kind="Class">ExecutableCommand</a><a href="#constructor.new_ExecutableCommand" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>CommonCommand constructor.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5>executable: <span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"><p>CommonCommand to execute.</p>
+</div></li>
+<li>
+<h5><code class="tsd-tag ts-flagRest">Rest</code> <span class="tsd-signature-symbol">...</span>args: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
+<div class="tsd-comment tsd-typography"><p>CommonCommand arguments.</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <a href="ExecutableCommand.html" class="tsd-signature-type" data-tsd-kind="Class">ExecutableCommand</a></h4><aside class="tsd-sources">
+<p>Overrides Command.constructor</p>
+<ul>
+<li>Defined in <a href="https://github.com/monstermichl/shell-factory-coco/blob/ffd61cc/src/base/executable-command.mts#L33">src/base/executable-command.mts:33</a></li></ul></aside></li>
+<li class="tsd-signature tsd-anchor-link" id="constructor.new_ExecutableCommand-1">new <wbr/>Executable<wbr/>Command<span class="tsd-signature-symbol">(</span>executable<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, <span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="ExecutableCommand.html" class="tsd-signature-type" data-tsd-kind="Class">ExecutableCommand</a><a href="#constructor.new_ExecutableCommand-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>CommonCommand constructor.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5>executable: <span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"><p>CommonCommand to execute.</p>
+</div></li>
+<li>
+<h5><code class="tsd-tag ts-flagRest">Rest</code> <span class="tsd-signature-symbol">...</span>args: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span></h5>
+<div class="tsd-comment tsd-typography"><p>CommonCommand arguments.</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <a href="ExecutableCommand.html" class="tsd-signature-type" data-tsd-kind="Class">ExecutableCommand</a></h4><aside class="tsd-sources">
+<p>Overrides Command.constructor</p>
+<ul>
+<li>Defined in <a href="https://github.com/monstermichl/shell-factory-coco/blob/ffd61cc/src/base/executable-command.mts#L40">src/base/executable-command.mts:40</a></li></ul></aside></li>
+<li class="tsd-signature tsd-anchor-link" id="constructor.new_ExecutableCommand-2">new <wbr/>Executable<wbr/>Command<span class="tsd-signature-symbol">(</span>executable<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, <span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="ExecutableCommand.html" class="tsd-signature-type" data-tsd-kind="Class">ExecutableCommand</a><a href="#constructor.new_ExecutableCommand-2" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>CommonCommand constructor.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5>executable: <span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"><p>CommonCommand to execute.</p>
+</div></li>
+<li>
+<h5><code class="tsd-tag ts-flagRest">Rest</code> <span class="tsd-signature-symbol">...</span>args: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">[]</span></h5>
+<div class="tsd-comment tsd-typography"><p>CommonCommand arguments.</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <a href="ExecutableCommand.html" class="tsd-signature-type" data-tsd-kind="Class">ExecutableCommand</a></h4><aside class="tsd-sources">
+<p>Overrides Command.constructor</p>
+<ul>
+<li>Defined in <a href="https://github.com/monstermichl/shell-factory-coco/blob/ffd61cc/src/base/executable-command.mts#L47">src/base/executable-command.mts:47</a></li></ul></aside></li>
+<li class="tsd-signature tsd-anchor-link" id="constructor.new_ExecutableCommand-3">new <wbr/>Executable<wbr/>Command<span class="tsd-signature-symbol">(</span>executable<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, <span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><a href="Argument.html" class="tsd-signature-type" data-tsd-kind="Class">Argument</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="ExecutableCommand.html" class="tsd-signature-type" data-tsd-kind="Class">ExecutableCommand</a><a href="#constructor.new_ExecutableCommand-3" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>CommonCommand constructor.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5>executable: <span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"><p>CommonCommand to execute.</p>
+</div></li>
+<li>
+<h5><code class="tsd-tag ts-flagRest">Rest</code> <span class="tsd-signature-symbol">...</span>args: <a href="Argument.html" class="tsd-signature-type" data-tsd-kind="Class">Argument</a><span class="tsd-signature-symbol">[]</span></h5>
+<div class="tsd-comment tsd-typography"><p>CommonCommand arguments.</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <a href="ExecutableCommand.html" class="tsd-signature-type" data-tsd-kind="Class">ExecutableCommand</a></h4><aside class="tsd-sources">
+<p>Overrides Command.constructor</p>
+<ul>
+<li>Defined in <a href="https://github.com/monstermichl/shell-factory-coco/blob/ffd61cc/src/base/executable-command.mts#L54">src/base/executable-command.mts:54</a></li></ul></aside></li>
+<li class="tsd-signature tsd-anchor-link" id="constructor.new_ExecutableCommand-4">new <wbr/>Executable<wbr/>Command<span class="tsd-signature-symbol">(</span>executable<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, <span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><a href="SwitchArgument.html" class="tsd-signature-type" data-tsd-kind="Class">SwitchArgument</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="ExecutableCommand.html" class="tsd-signature-type" data-tsd-kind="Class">ExecutableCommand</a><a href="#constructor.new_ExecutableCommand-4" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>CommonCommand constructor.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5>executable: <span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"><p>CommonCommand to execute.</p>
+</div></li>
+<li>
+<h5><code class="tsd-tag ts-flagRest">Rest</code> <span class="tsd-signature-symbol">...</span>args: <a href="SwitchArgument.html" class="tsd-signature-type" data-tsd-kind="Class">SwitchArgument</a><span class="tsd-signature-symbol">[]</span></h5>
+<div class="tsd-comment tsd-typography"><p>CommonCommand arguments.</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <a href="ExecutableCommand.html" class="tsd-signature-type" data-tsd-kind="Class">ExecutableCommand</a></h4><aside class="tsd-sources">
+<p>Overrides Command.constructor</p>
+<ul>
+<li>Defined in <a href="https://github.com/monstermichl/shell-factory-coco/blob/ffd61cc/src/base/executable-command.mts#L61">src/base/executable-command.mts:61</a></li></ul></aside></li>
+<li class="tsd-signature tsd-anchor-link" id="constructor.new_ExecutableCommand-5">new <wbr/>Executable<wbr/>Command<span class="tsd-signature-symbol">(</span>executable<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, <span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><a href="Argument.html" class="tsd-signature-type" data-tsd-kind="Class">Argument</a><span class="tsd-signature-symbol"> | </span><a href="SwitchArgument.html" class="tsd-signature-type" data-tsd-kind="Class">SwitchArgument</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="ExecutableCommand.html" class="tsd-signature-type" data-tsd-kind="Class">ExecutableCommand</a><a href="#constructor.new_ExecutableCommand-5" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>CommonCommand constructor.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5>executable: <span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"><p>CommonCommand to execute.</p>
+</div></li>
+<li>
+<h5><code class="tsd-tag ts-flagRest">Rest</code> <span class="tsd-signature-symbol">...</span>args: <span class="tsd-signature-symbol">(</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><a href="Argument.html" class="tsd-signature-type" data-tsd-kind="Class">Argument</a><span class="tsd-signature-symbol"> | </span><a href="SwitchArgument.html" class="tsd-signature-type" data-tsd-kind="Class">SwitchArgument</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">[]</span></h5>
+<div class="tsd-comment tsd-typography"><p>CommonCommand arguments.</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <a href="ExecutableCommand.html" class="tsd-signature-type" data-tsd-kind="Class">ExecutableCommand</a></h4><aside class="tsd-sources">
+<p>Overrides Command.constructor</p>
+<ul>
+<li>Defined in <a href="https://github.com/monstermichl/shell-factory-coco/blob/ffd61cc/src/base/executable-command.mts#L68">src/base/executable-command.mts:68</a></li></ul></aside></li></ul></section></section>
+<section class="tsd-panel-group tsd-member-group">
+<h2>Properties</h2>
+<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private"><a id="_arguments" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>_arguments</span><a href="#_arguments" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<div class="tsd-signature">_arguments<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">ArgumentBase</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> = ...</span></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/monstermichl/shell-factory-coco/blob/ffd61cc/src/base/executable-command.mts#L25">src/base/executable-command.mts:25</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected tsd-is-inherited tsd-is-external"><a id="_chain" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagProtected">Protected</code> <span>_chain</span><a href="#_chain" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<div class="tsd-signature">_chain<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">ChainElement</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">OperationalConnectType</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">LogicalConnectType</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Command</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></div><aside class="tsd-sources">
+<p>Inherited from Command._chain</p>
+<ul>
+<li>Defined in node_modules/shell-factory/dist/base/command.d.mts:14</li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private"><a id="_executable" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>_executable</span><a href="#_executable" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<div class="tsd-signature">_executable<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/monstermichl/shell-factory-coco/blob/ffd61cc/src/base/executable-command.mts#L24">src/base/executable-command.mts:24</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private"><a id="_executeAsRoot" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>_execute<wbr/>As<wbr/>Root</span><a href="#_executeAsRoot" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<div class="tsd-signature">_execute<wbr/>As<wbr/>Root<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/monstermichl/shell-factory-coco/blob/ffd61cc/src/base/executable-command.mts#L23">src/base/executable-command.mts:23</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private"><a id="_rootCommand" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>_root<wbr/>Command</span><a href="#_rootCommand" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<div class="tsd-signature">_root<wbr/>Command<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = ExecutableCommand._rootCommand</span></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/monstermichl/shell-factory-coco/blob/ffd61cc/src/base/executable-command.mts#L22">src/base/executable-command.mts:22</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected tsd-is-inherited tsd-is-external"><a id="_statement" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagProtected">Protected</code> <span>_statement</span><a href="#_statement" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<div class="tsd-signature">_statement<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div><aside class="tsd-sources">
+<p>Inherited from Command._statement</p>
+<ul>
+<li>Defined in node_modules/shell-factory/dist/base/statement.d.mts:7</li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private"><a id="_DEFAULT_ROOT_COMMAND" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagStatic">Static</code> <code class="tsd-tag ts-flagPrivate">Private</code> <code class="tsd-tag ts-flagReadonly">Readonly</code> <span>_DEFAULT_<wbr/>ROOT_<wbr/>COMMAND</span><a href="#_DEFAULT_ROOT_COMMAND" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<div class="tsd-signature">_DEFAULT_<wbr/>ROOT_<wbr/>COMMAND<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">&quot;sudo&quot;</span><span class="tsd-signature-symbol"> = &#39;sudo&#39;</span></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/monstermichl/shell-factory-coco/blob/ffd61cc/src/base/executable-command.mts#L18">src/base/executable-command.mts:18</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private"><a id="_rootCommand-1" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagStatic">Static</code> <code class="tsd-tag ts-flagPrivate">Private</code> <span>_root<wbr/>Command</span><a href="#_rootCommand-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<div class="tsd-signature">_root<wbr/>Command<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = ExecutableCommand._DEFAULT_ROOT_COMMAND</span></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/monstermichl/shell-factory-coco/blob/ffd61cc/src/base/executable-command.mts#L20">src/base/executable-command.mts:20</a></li></ul></aside></section></section>
+<section class="tsd-panel-group tsd-member-group">
+<h2>Accessors</h2>
+<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class"><a id="arguments" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>arguments</span><a href="#arguments" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class">
+<li class="tsd-signature" id="arguments.arguments-1"><span class="tsd-signature-symbol">get</span> arguments<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ArgumentBase</span><span class="tsd-signature-symbol">[]</span></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Returns the arguments list.</p>
+</div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">ArgumentBase</span><span class="tsd-signature-symbol">[]</span></h4><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/monstermichl/shell-factory-coco/blob/ffd61cc/src/base/executable-command.mts#L154">src/base/executable-command.mts:154</a></li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class"><a id="asRoot" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>as<wbr/>Root</span><a href="#asRoot" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class">
+<li class="tsd-signature" id="asRoot.asRoot-1"><span class="tsd-signature-symbol">get</span> asRoot<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Sets the command to be executed as root.</p>
+</div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">this</span></h4><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/monstermichl/shell-factory-coco/blob/ffd61cc/src/base/executable-command.mts#L161">src/base/executable-command.mts:161</a></li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="chain" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>chain</span><a href="#chain" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited tsd-is-external">
+<li class="tsd-signature" id="chain.chain-1"><span class="tsd-signature-symbol">get</span> chain<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ChainElement</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">OperationalConnectType</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">LogicalConnectType</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Command</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Returns the applied chain.</p>
+</div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">ChainElement</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">OperationalConnectType</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">LogicalConnectType</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Command</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></h4><aside class="tsd-sources">
+<p>Inherited from Command.chain</p>
+<ul>
+<li>Defined in node_modules/shell-factory/dist/base/command.d.mts:30</li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="comment" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>comment</span><a href="#comment" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited tsd-is-external">
+<li class="tsd-signature" id="comment.comment-1"><span class="tsd-signature-symbol">get</span> comment<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Returns the object&#39;s comment.</p>
+</div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4><aside class="tsd-sources">
+<p>Inherited from Command.comment</p>
+<ul>
+<li>Defined in node_modules/shell-factory/dist/base/base.d.mts:25</li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class"><a id="executable" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>executable</span><a href="#executable" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class">
+<li class="tsd-signature" id="executable.executable-1"><span class="tsd-signature-symbol">get</span> executable<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Returns the executable string.</p>
+</div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/monstermichl/shell-factory-coco/blob/ffd61cc/src/base/executable-command.mts#L147">src/base/executable-command.mts:147</a></li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="id" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>id</span><a href="#id" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited tsd-is-external">
+<li class="tsd-signature" id="id.id-1"><span class="tsd-signature-symbol">get</span> id<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Returns the object&#39;s ID.</p>
+</div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4><aside class="tsd-sources">
+<p>Inherited from Command.id</p>
+<ul>
+<li>Defined in node_modules/shell-factory/dist/base/base.d.mts:21</li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class"><a id="notAsRoot" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>not<wbr/>As<wbr/>Root</span><a href="#notAsRoot" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class">
+<li class="tsd-signature" id="notAsRoot.notAsRoot-1"><span class="tsd-signature-symbol">get</span> notAsRoot<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Sets the command to be executed as current user.</p>
+</div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">this</span></h4><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/monstermichl/shell-factory-coco/blob/ffd61cc/src/base/executable-command.mts#L168">src/base/executable-command.mts:168</a></li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="statement" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>statement</span><a href="#statement" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited tsd-is-external">
+<li class="tsd-signature" id="statement.statement-1"><span class="tsd-signature-symbol">get</span> statement<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Returns the Statement value.</p>
+
+<h3>Returns</h3><p>The Statement value.</p>
+</div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4><aside class="tsd-sources">
+<p>Inherited from Command.statement</p>
+<ul>
+<li>Defined in node_modules/shell-factory/dist/base/statement.d.mts:37</li></ul></aside></li>
+<li class="tsd-signature" id="statement.statement-2"><span class="tsd-signature-symbol">set</span> statement<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Statement</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Sets the Statement value.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5>value: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Statement</span></h5></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
+<p>Inherited from Command.statement</p>
+<ul>
+<li>Defined in node_modules/shell-factory/dist/base/statement.d.mts:41</li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="value" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>value</span><a href="#value" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited tsd-is-external">
+<li class="tsd-signature" id="value.value-1"><span class="tsd-signature-symbol">get</span> value<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Returns the complete Statement chain.</p>
+
+<h3>Returns</h3><p>The Statement value.</p>
+</div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4><aside class="tsd-sources">
+<p>Inherited from Command.value</p>
+<ul>
+<li>Defined in node_modules/shell-factory/dist/base/command.d.mts:26</li></ul></aside></li></ul></section></section>
+<section class="tsd-panel-group tsd-member-group">
+<h2>Methods</h2>
+<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private"><a id="_asRoot" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>_as<wbr/>Root</span><a href="#_asRoot" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
+<li class="tsd-signature tsd-anchor-link" id="_asRoot._asRoot-1">_as<wbr/>Root<span class="tsd-signature-symbol">(</span>executeAsRoot<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="ExecutableCommand.html" class="tsd-signature-type" data-tsd-kind="Class">ExecutableCommand</a><a href="#_asRoot._asRoot-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Sets the command to be executed as root or not as root</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5>executeAsRoot: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = true</span></h5>
+<div class="tsd-comment tsd-typography"><p>If true, the command is executed as root.</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <a href="ExecutableCommand.html" class="tsd-signature-type" data-tsd-kind="Class">ExecutableCommand</a></h4><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/monstermichl/shell-factory-coco/blob/ffd61cc/src/base/executable-command.mts#L221">src/base/executable-command.mts:221</a></li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private"><a id="_updateStatement" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>_update<wbr/>Statement</span><a href="#_updateStatement" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
+<li class="tsd-signature tsd-anchor-link" id="_updateStatement._updateStatement-1">_update<wbr/>Statement<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="ExecutableCommand.html" class="tsd-signature-type" data-tsd-kind="Class">ExecutableCommand</a><a href="#_updateStatement._updateStatement-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Updates the Statement&#39;s value.</p>
+</div>
+<h4 class="tsd-returns-title">Returns <a href="ExecutableCommand.html" class="tsd-signature-type" data-tsd-kind="Class">ExecutableCommand</a></h4><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/monstermichl/shell-factory-coco/blob/ffd61cc/src/base/executable-command.mts#L209">src/base/executable-command.mts:209</a></li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="and" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>and</span><a href="#and" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
+<li class="tsd-signature tsd-anchor-link" id="and.and-1">and<span class="tsd-signature-symbol">(</span>target<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="ExecutableCommand.html" class="tsd-signature-type" data-tsd-kind="Class">ExecutableCommand</a><a href="#and.and-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Logically and-connects the result to another command.</p>
+
+<h3>Returns</h3><p>The current instance.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5>target: <span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"><p>Command to connect to.</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <a href="ExecutableCommand.html" class="tsd-signature-type" data-tsd-kind="Class">ExecutableCommand</a></h4><aside class="tsd-sources">
+<p>Inherited from Command.and</p>
+<ul>
+<li>Defined in node_modules/shell-factory/dist/base/command.d.mts:149</li></ul></aside></li>
+<li class="tsd-signature tsd-anchor-link" id="and.and-2">and<span class="tsd-signature-symbol">(</span>target<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="ExecutableCommand.html" class="tsd-signature-type" data-tsd-kind="Class">ExecutableCommand</a><a href="#and.and-2" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Logically and-connects the result to another command.</p>
+
+<h3>Returns</h3><p>The current instance.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5>target: <span class="tsd-signature-type">boolean</span></h5>
+<div class="tsd-comment tsd-typography"><p>Command to connect to.</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <a href="ExecutableCommand.html" class="tsd-signature-type" data-tsd-kind="Class">ExecutableCommand</a></h4><aside class="tsd-sources">
+<p>Inherited from Command.and</p>
+<ul>
+<li>Defined in node_modules/shell-factory/dist/base/command.d.mts:156</li></ul></aside></li>
+<li class="tsd-signature tsd-anchor-link" id="and.and-3">and<span class="tsd-signature-symbol">(</span>target<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="ExecutableCommand.html" class="tsd-signature-type" data-tsd-kind="Class">ExecutableCommand</a><a href="#and.and-3" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Logically and-connects the result to another command.</p>
+
+<h3>Returns</h3><p>The current instance.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5>target: <span class="tsd-signature-type">number</span></h5>
+<div class="tsd-comment tsd-typography"><p>Command to connect to.</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <a href="ExecutableCommand.html" class="tsd-signature-type" data-tsd-kind="Class">ExecutableCommand</a></h4><aside class="tsd-sources">
+<p>Inherited from Command.and</p>
+<ul>
+<li>Defined in node_modules/shell-factory/dist/base/command.d.mts:163</li></ul></aside></li>
+<li class="tsd-signature tsd-anchor-link" id="and.and-4">and<span class="tsd-signature-symbol">(</span>target<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Statement</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="ExecutableCommand.html" class="tsd-signature-type" data-tsd-kind="Class">ExecutableCommand</a><a href="#and.and-4" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Logically and-connects the result to another command.</p>
+
+<h3>Returns</h3><p>The current instance.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5>target: <span class="tsd-signature-type">Statement</span></h5>
+<div class="tsd-comment tsd-typography"><p>Command to connect to.</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <a href="ExecutableCommand.html" class="tsd-signature-type" data-tsd-kind="Class">ExecutableCommand</a></h4><aside class="tsd-sources">
+<p>Inherited from Command.and</p>
+<ul>
+<li>Defined in node_modules/shell-factory/dist/base/command.d.mts:170</li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="append" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>append</span><a href="#append" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
+<li class="tsd-signature tsd-anchor-link" id="append.append-1">append<span class="tsd-signature-symbol">(</span>target<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="ExecutableCommand.html" class="tsd-signature-type" data-tsd-kind="Class">ExecutableCommand</a><a href="#append.append-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Append to target.</p>
+
+<h3>Returns</h3><p>The current instance.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5>target: <span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"><p>Target to append to.</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <a href="ExecutableCommand.html" class="tsd-signature-type" data-tsd-kind="Class">ExecutableCommand</a></h4><aside class="tsd-sources">
+<p>Inherited from Command.append</p>
+<ul>
+<li>Defined in node_modules/shell-factory/dist/base/command.d.mts:93</li></ul></aside></li>
+<li class="tsd-signature tsd-anchor-link" id="append.append-2">append<span class="tsd-signature-symbol">(</span>target<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="ExecutableCommand.html" class="tsd-signature-type" data-tsd-kind="Class">ExecutableCommand</a><a href="#append.append-2" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Append to target.</p>
+
+<h3>Returns</h3><p>The current instance.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5>target: <span class="tsd-signature-type">number</span></h5>
+<div class="tsd-comment tsd-typography"><p>Target to append to.</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <a href="ExecutableCommand.html" class="tsd-signature-type" data-tsd-kind="Class">ExecutableCommand</a></h4><aside class="tsd-sources">
+<p>Inherited from Command.append</p>
+<ul>
+<li>Defined in node_modules/shell-factory/dist/base/command.d.mts:100</li></ul></aside></li>
+<li class="tsd-signature tsd-anchor-link" id="append.append-3">append<span class="tsd-signature-symbol">(</span>target<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="ExecutableCommand.html" class="tsd-signature-type" data-tsd-kind="Class">ExecutableCommand</a><a href="#append.append-3" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Append to target.</p>
+
+<h3>Returns</h3><p>The current instance.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5>target: <span class="tsd-signature-type">boolean</span></h5>
+<div class="tsd-comment tsd-typography"><p>Target to append to.</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <a href="ExecutableCommand.html" class="tsd-signature-type" data-tsd-kind="Class">ExecutableCommand</a></h4><aside class="tsd-sources">
+<p>Inherited from Command.append</p>
+<ul>
+<li>Defined in node_modules/shell-factory/dist/base/command.d.mts:107</li></ul></aside></li>
+<li class="tsd-signature tsd-anchor-link" id="append.append-4">append<span class="tsd-signature-symbol">(</span>target<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Statement</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="ExecutableCommand.html" class="tsd-signature-type" data-tsd-kind="Class">ExecutableCommand</a><a href="#append.append-4" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Append to target.</p>
+
+<h3>Returns</h3><p>The current instance.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5>target: <span class="tsd-signature-type">Statement</span></h5>
+<div class="tsd-comment tsd-typography"><p>Target to append to.</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <a href="ExecutableCommand.html" class="tsd-signature-type" data-tsd-kind="Class">ExecutableCommand</a></h4><aside class="tsd-sources">
+<p>Inherited from Command.append</p>
+<ul>
+<li>Defined in node_modules/shell-factory/dist/base/command.d.mts:114</li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="clearChain" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>clear<wbr/>Chain</span><a href="#clearChain" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
+<li class="tsd-signature tsd-anchor-link" id="clearChain.clearChain-1">clear<wbr/>Chain<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="ExecutableCommand.html" class="tsd-signature-type" data-tsd-kind="Class">ExecutableCommand</a><a href="#clearChain.clearChain-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Clears the whole chain.</p>
+
+<h3>Returns</h3><p>The current instance.</p>
+</div>
+<h4 class="tsd-returns-title">Returns <a href="ExecutableCommand.html" class="tsd-signature-type" data-tsd-kind="Class">ExecutableCommand</a></h4><aside class="tsd-sources">
+<p>Inherited from Command.clearChain</p>
+<ul>
+<li>Defined in node_modules/shell-factory/dist/base/command.d.mts:254</li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="clearComment" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>clear<wbr/>Comment</span><a href="#clearComment" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
+<li class="tsd-signature tsd-anchor-link" id="clearComment.clearComment-1">clear<wbr/>Comment<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="ExecutableCommand.html" class="tsd-signature-type" data-tsd-kind="Class">ExecutableCommand</a><a href="#clearComment.clearComment-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Removes the object&#39;s comment.</p>
+
+<h3>Returns</h3><p>The current instance.</p>
+</div>
+<h4 class="tsd-returns-title">Returns <a href="ExecutableCommand.html" class="tsd-signature-type" data-tsd-kind="Class">ExecutableCommand</a></h4><aside class="tsd-sources">
+<p>Inherited from Command.clearComment</p>
+<ul>
+<li>Defined in node_modules/shell-factory/dist/base/base.d.mts:38</li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="compareIdOrPattern" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>compare<wbr/>Id<wbr/>Or<wbr/>Pattern</span><a href="#compareIdOrPattern" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
+<li class="tsd-signature tsd-anchor-link" id="compareIdOrPattern.compareIdOrPattern-1">compare<wbr/>Id<wbr/>Or<wbr/>Pattern<span class="tsd-signature-symbol">(</span>idOrPattern<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><a href="#compareIdOrPattern.compareIdOrPattern-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Checks if a Statement matches an ID or a pattern.</p>
+
+<h3>Returns</h3><p>True if the ID or pattern matched.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5>idOrPattern: <span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"><p>ID or pattern to match against.</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4><aside class="tsd-sources">
+<p>Inherited from Command.compareIdOrPattern</p>
+<ul>
+<li>Defined in node_modules/shell-factory/dist/base/statement.d.mts:55</li></ul></aside></li>
+<li class="tsd-signature tsd-anchor-link" id="compareIdOrPattern.compareIdOrPattern-2">compare<wbr/>Id<wbr/>Or<wbr/>Pattern<span class="tsd-signature-symbol">(</span>idOrPattern<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><a href="#compareIdOrPattern.compareIdOrPattern-2" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Checks if a Statement matches an ID or a pattern.</p>
+
+<h3>Returns</h3><p>True if the ID or pattern matched.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5>idOrPattern: <span class="tsd-signature-type">RegExp</span></h5>
+<div class="tsd-comment tsd-typography"><p>ID or pattern to match against.</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4><aside class="tsd-sources">
+<p>Inherited from Command.compareIdOrPattern</p>
+<ul>
+<li>Defined in node_modules/shell-factory/dist/base/statement.d.mts:62</li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="eval" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>eval</span><a href="#eval" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
+<li class="tsd-signature tsd-anchor-link" id="eval.eval-1">eval<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">EvalSubshellStatement</span><a href="#eval.eval-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Returns the command in an evaluation-subshell statement.</p>
+
+<h3>Returns</h3><p>A new EvalSubshellStatement instance.</p>
+</div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">EvalSubshellStatement</span></h4><aside class="tsd-sources">
+<p>Inherited from Command.eval</p>
+<ul>
+<li>Defined in node_modules/shell-factory/dist/base/command.d.mts:266</li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="findInChain" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>find<wbr/>In<wbr/>Chain</span><a href="#findInChain" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
+<li class="tsd-signature tsd-anchor-link" id="findInChain.findInChain-1">find<wbr/>In<wbr/>Chain<span class="tsd-signature-symbol">(</span>idOrPattern<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, type<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">OperationalConnectType</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">LogicalConnectType</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ChainElement</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">OperationalConnectType</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">LogicalConnectType</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Command</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><a href="#findInChain.findInChain-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Finds all elements based on the provided ID or pattern in the chain.</p>
+
+<h3>Returns</h3><p>List of found chain elements.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5>idOrPattern: <span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"><p>Content ID or Statement pattern.</p>
+</div></li>
+<li>
+<h5><code class="tsd-tag ts-flagOptional">Optional</code> type: <span class="tsd-signature-type">OperationalConnectType</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">LogicalConnectType</span></h5>
+<div class="tsd-comment tsd-typography"><p>If provided, the type must also match.</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">ChainElement</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">OperationalConnectType</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">LogicalConnectType</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Command</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></h4><aside class="tsd-sources">
+<p>Inherited from Command.findInChain</p>
+<ul>
+<li>Defined in node_modules/shell-factory/dist/base/command.d.mts:207</li></ul></aside></li>
+<li class="tsd-signature tsd-anchor-link" id="findInChain.findInChain-2">find<wbr/>In<wbr/>Chain<span class="tsd-signature-symbol">(</span>pattern<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">RegExp</span>, type<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">OperationalConnectType</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">LogicalConnectType</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ChainElement</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">OperationalConnectType</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">LogicalConnectType</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Command</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><a href="#findInChain.findInChain-2" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Finds all elements based on the provided ID or pattern in the chain.</p>
+
+<h3>Returns</h3><p>List of found chain elements.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5>pattern: <span class="tsd-signature-type">RegExp</span></h5>
+<div class="tsd-comment tsd-typography"><p>Content ID or Statement pattern.</p>
+</div></li>
+<li>
+<h5><code class="tsd-tag ts-flagOptional">Optional</code> type: <span class="tsd-signature-type">OperationalConnectType</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">LogicalConnectType</span></h5>
+<div class="tsd-comment tsd-typography"><p>If provided, the type must also match.</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">ChainElement</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">OperationalConnectType</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">LogicalConnectType</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Command</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></h4><aside class="tsd-sources">
+<p>Inherited from Command.findInChain</p>
+<ul>
+<li>Defined in node_modules/shell-factory/dist/base/command.d.mts:216</li></ul></aside></li>
+<li class="tsd-signature tsd-anchor-link" id="findInChain.findInChain-3">find<wbr/>In<wbr/>Chain<span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">OperationalConnectType</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">LogicalConnectType</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ChainElement</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">OperationalConnectType</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">LogicalConnectType</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Command</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><a href="#findInChain.findInChain-3" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Finds all elements based on the provided type.</p>
+
+<h3>Returns</h3><p>List of found chain elements.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5>type: <span class="tsd-signature-type">OperationalConnectType</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">LogicalConnectType</span></h5>
+<div class="tsd-comment tsd-typography"><p>Type to look for.</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">ChainElement</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">OperationalConnectType</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">LogicalConnectType</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Command</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></h4><aside class="tsd-sources">
+<p>Inherited from Command.findInChain</p>
+<ul>
+<li>Defined in node_modules/shell-factory/dist/base/command.d.mts:223</li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a id="getRootCommand" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>get<wbr/>Root<wbr/>Command</span><a href="#getRootCommand" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+<li class="tsd-signature tsd-anchor-link" id="getRootCommand.getRootCommand-1">get<wbr/>Root<wbr/>Command<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><a href="#getRootCommand.getRootCommand-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Returns the instance&#39; root command.</p>
+
+<h3>Returns</h3><p>Root command string.</p>
+</div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/monstermichl/shell-factory-coco/blob/ffd61cc/src/base/executable-command.mts#L140">src/base/executable-command.mts:140</a></li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="meta" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>meta</span><a href="#meta" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
+<li class="tsd-signature tsd-anchor-link" id="meta.meta-1">meta<span class="tsd-signature-symbol">(</span>container<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">MetaData</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="ExecutableCommand.html" class="tsd-signature-type" data-tsd-kind="Class">ExecutableCommand</a><a href="#meta.meta-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Fills the provided MetaData-struct with data. It&#39;s
+done this way to get the meta-data of a newly
+created object while still being able to chain
+the required calls.</p>
+
+<h3>Returns</h3><p>The current instance.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5>container: <span class="tsd-signature-type">MetaData</span></h5>
+<div class="tsd-comment tsd-typography"><p>MetaData object to fill.</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <a href="ExecutableCommand.html" class="tsd-signature-type" data-tsd-kind="Class">ExecutableCommand</a></h4><aside class="tsd-sources">
+<p>Inherited from Command.meta</p>
+<ul>
+<li>Defined in node_modules/shell-factory/dist/base/base.d.mts:48</li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="or" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>or</span><a href="#or" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
+<li class="tsd-signature tsd-anchor-link" id="or.or-1">or<span class="tsd-signature-symbol">(</span>target<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="ExecutableCommand.html" class="tsd-signature-type" data-tsd-kind="Class">ExecutableCommand</a><a href="#or.or-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Logically or-connects the result to another command.</p>
+
+<h3>Returns</h3><p>The current instance.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5>target: <span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"><p>Command to connect to.</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <a href="ExecutableCommand.html" class="tsd-signature-type" data-tsd-kind="Class">ExecutableCommand</a></h4><aside class="tsd-sources">
+<p>Inherited from Command.or</p>
+<ul>
+<li>Defined in node_modules/shell-factory/dist/base/command.d.mts:177</li></ul></aside></li>
+<li class="tsd-signature tsd-anchor-link" id="or.or-2">or<span class="tsd-signature-symbol">(</span>target<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="ExecutableCommand.html" class="tsd-signature-type" data-tsd-kind="Class">ExecutableCommand</a><a href="#or.or-2" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Logically or-connects the result to another command.</p>
+
+<h3>Returns</h3><p>The current instance.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5>target: <span class="tsd-signature-type">boolean</span></h5>
+<div class="tsd-comment tsd-typography"><p>Command to connect to.</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <a href="ExecutableCommand.html" class="tsd-signature-type" data-tsd-kind="Class">ExecutableCommand</a></h4><aside class="tsd-sources">
+<p>Inherited from Command.or</p>
+<ul>
+<li>Defined in node_modules/shell-factory/dist/base/command.d.mts:184</li></ul></aside></li>
+<li class="tsd-signature tsd-anchor-link" id="or.or-3">or<span class="tsd-signature-symbol">(</span>target<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="ExecutableCommand.html" class="tsd-signature-type" data-tsd-kind="Class">ExecutableCommand</a><a href="#or.or-3" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Logically or-connects the result to another command.</p>
+
+<h3>Returns</h3><p>The current instance.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5>target: <span class="tsd-signature-type">number</span></h5>
+<div class="tsd-comment tsd-typography"><p>Command to connect to.</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <a href="ExecutableCommand.html" class="tsd-signature-type" data-tsd-kind="Class">ExecutableCommand</a></h4><aside class="tsd-sources">
+<p>Inherited from Command.or</p>
+<ul>
+<li>Defined in node_modules/shell-factory/dist/base/command.d.mts:191</li></ul></aside></li>
+<li class="tsd-signature tsd-anchor-link" id="or.or-4">or<span class="tsd-signature-symbol">(</span>target<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Statement</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="ExecutableCommand.html" class="tsd-signature-type" data-tsd-kind="Class">ExecutableCommand</a><a href="#or.or-4" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Logically or-connects the result to another command.</p>
+
+<h3>Returns</h3><p>The current instance.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5>target: <span class="tsd-signature-type">Statement</span></h5>
+<div class="tsd-comment tsd-typography"><p>Command to connect to.</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <a href="ExecutableCommand.html" class="tsd-signature-type" data-tsd-kind="Class">ExecutableCommand</a></h4><aside class="tsd-sources">
+<p>Inherited from Command.or</p>
+<ul>
+<li>Defined in node_modules/shell-factory/dist/base/command.d.mts:198</li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="pipe" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>pipe</span><a href="#pipe" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
+<li class="tsd-signature tsd-anchor-link" id="pipe.pipe-1">pipe<span class="tsd-signature-symbol">(</span>target<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="ExecutableCommand.html" class="tsd-signature-type" data-tsd-kind="Class">ExecutableCommand</a><a href="#pipe.pipe-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Pipes the output into another command.</p>
+
+<h3>Returns</h3><p>The current instance.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5>target: <span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"><p>Command to pipe to.</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <a href="ExecutableCommand.html" class="tsd-signature-type" data-tsd-kind="Class">ExecutableCommand</a></h4><aside class="tsd-sources">
+<p>Inherited from Command.pipe</p>
+<ul>
+<li>Defined in node_modules/shell-factory/dist/base/command.d.mts:121</li></ul></aside></li>
+<li class="tsd-signature tsd-anchor-link" id="pipe.pipe-2">pipe<span class="tsd-signature-symbol">(</span>target<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="ExecutableCommand.html" class="tsd-signature-type" data-tsd-kind="Class">ExecutableCommand</a><a href="#pipe.pipe-2" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Pipes the output into another command.</p>
+
+<h3>Returns</h3><p>The current instance.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5>target: <span class="tsd-signature-type">number</span></h5>
+<div class="tsd-comment tsd-typography"><p>Command to pipe to.</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <a href="ExecutableCommand.html" class="tsd-signature-type" data-tsd-kind="Class">ExecutableCommand</a></h4><aside class="tsd-sources">
+<p>Inherited from Command.pipe</p>
+<ul>
+<li>Defined in node_modules/shell-factory/dist/base/command.d.mts:128</li></ul></aside></li>
+<li class="tsd-signature tsd-anchor-link" id="pipe.pipe-3">pipe<span class="tsd-signature-symbol">(</span>target<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="ExecutableCommand.html" class="tsd-signature-type" data-tsd-kind="Class">ExecutableCommand</a><a href="#pipe.pipe-3" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Pipes the output into another command.</p>
+
+<h3>Returns</h3><p>The current instance.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5>target: <span class="tsd-signature-type">boolean</span></h5>
+<div class="tsd-comment tsd-typography"><p>Command to pipe to.</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <a href="ExecutableCommand.html" class="tsd-signature-type" data-tsd-kind="Class">ExecutableCommand</a></h4><aside class="tsd-sources">
+<p>Inherited from Command.pipe</p>
+<ul>
+<li>Defined in node_modules/shell-factory/dist/base/command.d.mts:135</li></ul></aside></li>
+<li class="tsd-signature tsd-anchor-link" id="pipe.pipe-4">pipe<span class="tsd-signature-symbol">(</span>target<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Statement</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="ExecutableCommand.html" class="tsd-signature-type" data-tsd-kind="Class">ExecutableCommand</a><a href="#pipe.pipe-4" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Pipes the output into another command.</p>
+
+<h3>Returns</h3><p>The current instance.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5>target: <span class="tsd-signature-type">Statement</span></h5>
+<div class="tsd-comment tsd-typography"><p>Command to pipe to.</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <a href="ExecutableCommand.html" class="tsd-signature-type" data-tsd-kind="Class">ExecutableCommand</a></h4><aside class="tsd-sources">
+<p>Inherited from Command.pipe</p>
+<ul>
+<li>Defined in node_modules/shell-factory/dist/base/command.d.mts:142</li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="read" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>read</span><a href="#read" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
+<li class="tsd-signature tsd-anchor-link" id="read.read-1">read<span class="tsd-signature-symbol">(</span>source<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="ExecutableCommand.html" class="tsd-signature-type" data-tsd-kind="Class">ExecutableCommand</a><a href="#read.read-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Read from source.</p>
+
+<h3>Returns</h3><p>The current instance.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5>source: <span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"><p>Source to read from.</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <a href="ExecutableCommand.html" class="tsd-signature-type" data-tsd-kind="Class">ExecutableCommand</a></h4><aside class="tsd-sources">
+<p>Inherited from Command.read</p>
+<ul>
+<li>Defined in node_modules/shell-factory/dist/base/command.d.mts:37</li></ul></aside></li>
+<li class="tsd-signature tsd-anchor-link" id="read.read-2">read<span class="tsd-signature-symbol">(</span>source<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="ExecutableCommand.html" class="tsd-signature-type" data-tsd-kind="Class">ExecutableCommand</a><a href="#read.read-2" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Read from source.</p>
+
+<h3>Returns</h3><p>The current instance.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5>source: <span class="tsd-signature-type">number</span></h5>
+<div class="tsd-comment tsd-typography"><p>Source to read from.</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <a href="ExecutableCommand.html" class="tsd-signature-type" data-tsd-kind="Class">ExecutableCommand</a></h4><aside class="tsd-sources">
+<p>Inherited from Command.read</p>
+<ul>
+<li>Defined in node_modules/shell-factory/dist/base/command.d.mts:44</li></ul></aside></li>
+<li class="tsd-signature tsd-anchor-link" id="read.read-3">read<span class="tsd-signature-symbol">(</span>source<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="ExecutableCommand.html" class="tsd-signature-type" data-tsd-kind="Class">ExecutableCommand</a><a href="#read.read-3" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Read from source.</p>
+
+<h3>Returns</h3><p>The current instance.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5>source: <span class="tsd-signature-type">boolean</span></h5>
+<div class="tsd-comment tsd-typography"><p>Source to read from.</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <a href="ExecutableCommand.html" class="tsd-signature-type" data-tsd-kind="Class">ExecutableCommand</a></h4><aside class="tsd-sources">
+<p>Inherited from Command.read</p>
+<ul>
+<li>Defined in node_modules/shell-factory/dist/base/command.d.mts:51</li></ul></aside></li>
+<li class="tsd-signature tsd-anchor-link" id="read.read-4">read<span class="tsd-signature-symbol">(</span>source<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Statement</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="ExecutableCommand.html" class="tsd-signature-type" data-tsd-kind="Class">ExecutableCommand</a><a href="#read.read-4" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Read from source.</p>
+
+<h3>Returns</h3><p>The current instance.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5>source: <span class="tsd-signature-type">Statement</span></h5>
+<div class="tsd-comment tsd-typography"><p>Source to read from.</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <a href="ExecutableCommand.html" class="tsd-signature-type" data-tsd-kind="Class">ExecutableCommand</a></h4><aside class="tsd-sources">
+<p>Inherited from Command.read</p>
+<ul>
+<li>Defined in node_modules/shell-factory/dist/base/command.d.mts:58</li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="removeFromChain" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>remove<wbr/>From<wbr/>Chain</span><a href="#removeFromChain" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
+<li class="tsd-signature tsd-anchor-link" id="removeFromChain.removeFromChain-1">remove<wbr/>From<wbr/>Chain<span class="tsd-signature-symbol">(</span>idOrPattern<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, type<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">OperationalConnectType</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">LogicalConnectType</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="ExecutableCommand.html" class="tsd-signature-type" data-tsd-kind="Class">ExecutableCommand</a><a href="#removeFromChain.removeFromChain-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Removes all elements based on the provided ID or pattern from the chain.</p>
+
+<h3>Returns</h3><p>The current instance.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5>idOrPattern: <span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"><p>Content ID or Statement pattern.</p>
+</div></li>
+<li>
+<h5><code class="tsd-tag ts-flagOptional">Optional</code> type: <span class="tsd-signature-type">OperationalConnectType</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">LogicalConnectType</span></h5>
+<div class="tsd-comment tsd-typography"><p>If provided, the type must also match.</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <a href="ExecutableCommand.html" class="tsd-signature-type" data-tsd-kind="Class">ExecutableCommand</a></h4><aside class="tsd-sources">
+<p>Inherited from Command.removeFromChain</p>
+<ul>
+<li>Defined in node_modules/shell-factory/dist/base/command.d.mts:232</li></ul></aside></li>
+<li class="tsd-signature tsd-anchor-link" id="removeFromChain.removeFromChain-2">remove<wbr/>From<wbr/>Chain<span class="tsd-signature-symbol">(</span>pattern<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">RegExp</span>, type<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">OperationalConnectType</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">LogicalConnectType</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="ExecutableCommand.html" class="tsd-signature-type" data-tsd-kind="Class">ExecutableCommand</a><a href="#removeFromChain.removeFromChain-2" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Removes all elements based on the provided ID or pattern from the chain.</p>
+
+<h3>Returns</h3><p>The current instance.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5>pattern: <span class="tsd-signature-type">RegExp</span></h5>
+<div class="tsd-comment tsd-typography"><p>Content ID or Statement pattern.</p>
+</div></li>
+<li>
+<h5><code class="tsd-tag ts-flagOptional">Optional</code> type: <span class="tsd-signature-type">OperationalConnectType</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">LogicalConnectType</span></h5>
+<div class="tsd-comment tsd-typography"><p>If provided, the type must also match.</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <a href="ExecutableCommand.html" class="tsd-signature-type" data-tsd-kind="Class">ExecutableCommand</a></h4><aside class="tsd-sources">
+<p>Inherited from Command.removeFromChain</p>
+<ul>
+<li>Defined in node_modules/shell-factory/dist/base/command.d.mts:241</li></ul></aside></li>
+<li class="tsd-signature tsd-anchor-link" id="removeFromChain.removeFromChain-3">remove<wbr/>From<wbr/>Chain<span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">OperationalConnectType</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">LogicalConnectType</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="ExecutableCommand.html" class="tsd-signature-type" data-tsd-kind="Class">ExecutableCommand</a><a href="#removeFromChain.removeFromChain-3" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Removes all elements based on the provided type.</p>
+
+<h3>Returns</h3><p>The current instance.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5>type: <span class="tsd-signature-type">OperationalConnectType</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">LogicalConnectType</span></h5>
+<div class="tsd-comment tsd-typography"><p>Type to remove.</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <a href="ExecutableCommand.html" class="tsd-signature-type" data-tsd-kind="Class">ExecutableCommand</a></h4><aside class="tsd-sources">
+<p>Inherited from Command.removeFromChain</p>
+<ul>
+<li>Defined in node_modules/shell-factory/dist/base/command.d.mts:248</li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a id="rootCommand" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>root<wbr/>Command</span><a href="#rootCommand" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+<li class="tsd-signature tsd-anchor-link" id="rootCommand.rootCommand-1">root<wbr/>Command<span class="tsd-signature-symbol">(</span>command<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="ExecutableCommand.html" class="tsd-signature-type" data-tsd-kind="Class">ExecutableCommand</a><a href="#rootCommand.rootCommand-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Sets the root-command for the current instance.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5><code class="tsd-tag ts-flagOptional">Optional</code> command: <span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"><p>Root command (e.g. sudo)-</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <a href="ExecutableCommand.html" class="tsd-signature-type" data-tsd-kind="Class">ExecutableCommand</a></h4><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/monstermichl/shell-factory-coco/blob/ffd61cc/src/base/executable-command.mts#L177">src/base/executable-command.mts:177</a></li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="setComment" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>set<wbr/>Comment</span><a href="#setComment" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
+<li class="tsd-signature tsd-anchor-link" id="setComment.setComment-1">set<wbr/>Comment<span class="tsd-signature-symbol">(</span>comment<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="ExecutableCommand.html" class="tsd-signature-type" data-tsd-kind="Class">ExecutableCommand</a><a href="#setComment.setComment-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Attaches a comment to the object.</p>
+
+<h3>Returns</h3><p>The current instance.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5>comment: <span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"><p>Comment to set.</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <a href="ExecutableCommand.html" class="tsd-signature-type" data-tsd-kind="Class">ExecutableCommand</a></h4><aside class="tsd-sources">
+<p>Inherited from Command.setComment</p>
+<ul>
+<li>Defined in node_modules/shell-factory/dist/base/base.d.mts:32</li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="subshell" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>subshell</span><a href="#subshell" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
+<li class="tsd-signature tsd-anchor-link" id="subshell.subshell-1">subshell<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">SubshellStatement</span><a href="#subshell.subshell-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Returns the command in a subshell statement.</p>
+
+<h3>Returns</h3><p>A new SubshellStatement instance.</p>
+</div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">SubshellStatement</span></h4><aside class="tsd-sources">
+<p>Inherited from Command.subshell</p>
+<ul>
+<li>Defined in node_modules/shell-factory/dist/base/command.d.mts:260</li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="write" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>write</span><a href="#write" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
+<li class="tsd-signature tsd-anchor-link" id="write.write-1">write<span class="tsd-signature-symbol">(</span>target<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="ExecutableCommand.html" class="tsd-signature-type" data-tsd-kind="Class">ExecutableCommand</a><a href="#write.write-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Write to target.</p>
+
+<h3>Returns</h3><p>The current instance.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5>target: <span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"><p>Target to write to.</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <a href="ExecutableCommand.html" class="tsd-signature-type" data-tsd-kind="Class">ExecutableCommand</a></h4><aside class="tsd-sources">
+<p>Inherited from Command.write</p>
+<ul>
+<li>Defined in node_modules/shell-factory/dist/base/command.d.mts:65</li></ul></aside></li>
+<li class="tsd-signature tsd-anchor-link" id="write.write-2">write<span class="tsd-signature-symbol">(</span>target<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="ExecutableCommand.html" class="tsd-signature-type" data-tsd-kind="Class">ExecutableCommand</a><a href="#write.write-2" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Write to target.</p>
+
+<h3>Returns</h3><p>The current instance.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5>target: <span class="tsd-signature-type">number</span></h5>
+<div class="tsd-comment tsd-typography"><p>Target to write to.</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <a href="ExecutableCommand.html" class="tsd-signature-type" data-tsd-kind="Class">ExecutableCommand</a></h4><aside class="tsd-sources">
+<p>Inherited from Command.write</p>
+<ul>
+<li>Defined in node_modules/shell-factory/dist/base/command.d.mts:72</li></ul></aside></li>
+<li class="tsd-signature tsd-anchor-link" id="write.write-3">write<span class="tsd-signature-symbol">(</span>target<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="ExecutableCommand.html" class="tsd-signature-type" data-tsd-kind="Class">ExecutableCommand</a><a href="#write.write-3" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Write to target.</p>
+
+<h3>Returns</h3><p>The current instance.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5>target: <span class="tsd-signature-type">boolean</span></h5>
+<div class="tsd-comment tsd-typography"><p>Target to write to.</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <a href="ExecutableCommand.html" class="tsd-signature-type" data-tsd-kind="Class">ExecutableCommand</a></h4><aside class="tsd-sources">
+<p>Inherited from Command.write</p>
+<ul>
+<li>Defined in node_modules/shell-factory/dist/base/command.d.mts:79</li></ul></aside></li>
+<li class="tsd-signature tsd-anchor-link" id="write.write-4">write<span class="tsd-signature-symbol">(</span>target<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Statement</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="ExecutableCommand.html" class="tsd-signature-type" data-tsd-kind="Class">ExecutableCommand</a><a href="#write.write-4" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Write to target.</p>
+
+<h3>Returns</h3><p>The current instance.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5>target: <span class="tsd-signature-type">Statement</span></h5>
+<div class="tsd-comment tsd-typography"><p>Target to write to.</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <a href="ExecutableCommand.html" class="tsd-signature-type" data-tsd-kind="Class">ExecutableCommand</a></h4><aside class="tsd-sources">
+<p>Inherited from Command.write</p>
+<ul>
+<li>Defined in node_modules/shell-factory/dist/base/command.d.mts:86</li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private"><a id="_convertRootCommand" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagStatic">Static</code> <code class="tsd-tag ts-flagPrivate">Private</code> <span>_convert<wbr/>Root<wbr/>Command</span><a href="#_convertRootCommand" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
+<li class="tsd-signature tsd-anchor-link" id="_convertRootCommand._convertRootCommand-1">_convert<wbr/>Root<wbr/>Command<span class="tsd-signature-symbol">(</span>command<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, defaultCommand<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><a href="#_convertRootCommand._convertRootCommand-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Makes sure that passed root command is valid.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5>command: <span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"><p>Root command (e.g. sudo)-</p>
+</div></li>
+<li>
+<h5>defaultCommand: <span class="tsd-signature-type">string</span></h5></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/monstermichl/shell-factory-coco/blob/ffd61cc/src/base/executable-command.mts#L196">src/base/executable-command.mts:196</a></li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="compareIdOrPattern-3" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagStatic">Static</code> <span>compare<wbr/>Id<wbr/>Or<wbr/>Pattern</span><a href="#compareIdOrPattern-3" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
+<li class="tsd-signature tsd-anchor-link" id="compareIdOrPattern-3.compareIdOrPattern-4">compare<wbr/>Id<wbr/>Or<wbr/>Pattern<span class="tsd-signature-symbol">(</span>statement<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Statement</span>, idOrPattern<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><a href="#compareIdOrPattern-3.compareIdOrPattern-4" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Checks if a Statement matches an ID or a pattern.</p>
+
+<h3>Returns</h3><p>True if the ID or pattern matched.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5>statement: <span class="tsd-signature-type">Statement</span></h5>
+<div class="tsd-comment tsd-typography"><p>StatementOrBlock to compare a ID or pattern with.</p>
+</div></li>
+<li>
+<h5>idOrPattern: <span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"><p>ID or pattern to match against.</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4><aside class="tsd-sources">
+<p>Inherited from Command.compareIdOrPattern</p>
+<ul>
+<li>Defined in node_modules/shell-factory/dist/base/statement.d.mts:71</li></ul></aside></li>
+<li class="tsd-signature tsd-anchor-link" id="compareIdOrPattern-3.compareIdOrPattern-5">compare<wbr/>Id<wbr/>Or<wbr/>Pattern<span class="tsd-signature-symbol">(</span>statement<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Statement</span>, idOrPattern<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><a href="#compareIdOrPattern-3.compareIdOrPattern-5" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Checks if a Statement matches an ID or a pattern.</p>
+
+<h3>Returns</h3><p>True if the ID or pattern matched.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5>statement: <span class="tsd-signature-type">Statement</span></h5>
+<div class="tsd-comment tsd-typography"><p>StatementOrBlock to compare a ID or pattern with.</p>
+</div></li>
+<li>
+<h5>idOrPattern: <span class="tsd-signature-type">RegExp</span></h5>
+<div class="tsd-comment tsd-typography"><p>ID or pattern to match against.</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4><aside class="tsd-sources">
+<p>Inherited from Command.compareIdOrPattern</p>
+<ul>
+<li>Defined in node_modules/shell-factory/dist/base/statement.d.mts:80</li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="convert" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagStatic">Static</code> <span>convert</span><a href="#convert" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
+<li class="tsd-signature tsd-anchor-link" id="convert.convert-1">convert<span class="tsd-signature-symbol">(</span>statement<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><a href="#convert.convert-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Converts a statement string to a string (does nothing, just for
+the purpose of being callable with a string).</p>
+
+<h3>Returns</h3><p>Statement string.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5><code class="tsd-tag ts-flagOptional">Optional</code> statement: <span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"><p>Statement value.</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4><aside class="tsd-sources">
+<p>Inherited from Command.convert</p>
+<ul>
+<li>Defined in node_modules/shell-factory/dist/base/statement.d.mts:88</li></ul></aside></li>
+<li class="tsd-signature tsd-anchor-link" id="convert.convert-2">convert<span class="tsd-signature-symbol">(</span>statement<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Statement</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><a href="#convert.convert-2" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Converts a statement instance to a string.</p>
+
+<h3>Returns</h3><p>Statement string.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5><code class="tsd-tag ts-flagOptional">Optional</code> statement: <span class="tsd-signature-type">Statement</span></h5>
+<div class="tsd-comment tsd-typography"><p>Statement instance.</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4><aside class="tsd-sources">
+<p>Inherited from Command.convert</p>
+<ul>
+<li>Defined in node_modules/shell-factory/dist/base/statement.d.mts:95</li></ul></aside></li>
+<li class="tsd-signature tsd-anchor-link" id="convert.convert-3">convert<span class="tsd-signature-symbol">(</span>statement<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><a href="#convert.convert-3" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Converts a number to a string.</p>
+
+<h3>Returns</h3><p>Statement string.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5><code class="tsd-tag ts-flagOptional">Optional</code> statement: <span class="tsd-signature-type">number</span></h5>
+<div class="tsd-comment tsd-typography"><p>Number.</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4><aside class="tsd-sources">
+<p>Inherited from Command.convert</p>
+<ul>
+<li>Defined in node_modules/shell-factory/dist/base/statement.d.mts:102</li></ul></aside></li>
+<li class="tsd-signature tsd-anchor-link" id="convert.convert-4">convert<span class="tsd-signature-symbol">(</span>statement<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><a href="#convert.convert-4" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Converts a boolean to a string.</p>
+
+<h3>Returns</h3><p>Statement string.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5><code class="tsd-tag ts-flagOptional">Optional</code> statement: <span class="tsd-signature-type">boolean</span></h5>
+<div class="tsd-comment tsd-typography"><p>Boolean.</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4><aside class="tsd-sources">
+<p>Inherited from Command.convert</p>
+<ul>
+<li>Defined in node_modules/shell-factory/dist/base/statement.d.mts:109</li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a id="getRootCommand-2" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagStatic">Static</code> <span>get<wbr/>Root<wbr/>Command</span><a href="#getRootCommand-2" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+<li class="tsd-signature tsd-anchor-link" id="getRootCommand-2.getRootCommand-3">get<wbr/>Root<wbr/>Command<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><a href="#getRootCommand-2.getRootCommand-3" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Returns the general root command.</p>
+
+<h3>Returns</h3><p>Root command string.</p>
+</div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/monstermichl/shell-factory-coco/blob/ffd61cc/src/base/executable-command.mts#L131">src/base/executable-command.mts:131</a></li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a id="rootCommand-2" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagStatic">Static</code> <span>root<wbr/>Command</span><a href="#rootCommand-2" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+<li class="tsd-signature tsd-anchor-link" id="rootCommand-2.rootCommand-3">root<wbr/>Command<span class="tsd-signature-symbol">(</span>command<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><a href="#rootCommand-2.rootCommand-3" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Sets the root-command for all future instances.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5><code class="tsd-tag ts-flagOptional">Optional</code> command: <span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"><p>Root command (e.g. sudo)-</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/monstermichl/shell-factory-coco/blob/ffd61cc/src/base/executable-command.mts#L187">src/base/executable-command.mts:187</a></li></ul></aside></li></ul></section></section></div>
+<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+<div class="tsd-navigation settings">
+<details class="tsd-index-accordion"><summary class="tsd-accordion-summary">
+<h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4.93896 8.531L12 15.591L19.061 8.531L16.939 6.409L12 11.349L7.06098 6.409L4.93896 8.531Z" fill="var(--color-text)"></path></svg> Settings</h3></summary>
+<div class="tsd-accordion-details">
+<div class="tsd-filter-visibility">
+<h4 class="uppercase">Member Visibility</h4><form>
+<ul id="tsd-filter-options">
+<li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-protected" name="protected"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Protected</span></label></li>
+<li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-private" name="private"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Private</span></label></li>
+<li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-inherited" name="inherited" checked/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Inherited</span></label></li>
+<li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-external" name="external"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>External</span></label></li></ul></form></div>
+<div class="tsd-theme-toggle">
+<h4 class="uppercase">Theme</h4><select id="theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></div></div></details></div>
+<nav class="tsd-navigation primary">
+<details class="tsd-index-accordion" open><summary class="tsd-accordion-summary">
+<h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4.93896 8.531L12 15.591L19.061 8.531L16.939 6.409L12 11.349L7.06098 6.409L4.93896 8.531Z" fill="var(--color-text)"></path></svg> Modules</h3></summary>
+<div class="tsd-accordion-details">
+<ul>
+<li><a href="../modules.html">shell-<wbr/>factory-<wbr/>cocos</a>
+<ul></ul></li></ul></div></details></nav>
+<nav class="tsd-navigation secondary menu-sticky">
+<ul>
+<li class="current tsd-kind-class"><a href="ExecutableCommand.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><rect fill="var(--color-icon-background)" stroke="var(--color-ts-class)" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="6" id="icon-128-path"></rect><path d="M11.898 16.1201C11.098 16.1201 10.466 15.8961 10.002 15.4481C9.53803 15.0001 9.30603 14.3841 9.30603 13.6001V9.64012C9.30603 8.85612 9.53803 8.24012 10.002 7.79212C10.466 7.34412 11.098 7.12012 11.898 7.12012C12.682 7.12012 13.306 7.34812 13.77 7.80412C14.234 8.25212 14.466 8.86412 14.466 9.64012H13.386C13.386 9.14412 13.254 8.76412 12.99 8.50012C12.734 8.22812 12.37 8.09212 11.898 8.09212C11.426 8.09212 11.054 8.22412 10.782 8.48812C10.518 8.75212 10.386 9.13212 10.386 9.62812V13.6001C10.386 14.0961 10.518 14.4801 10.782 14.7521C11.054 15.0161 11.426 15.1481 11.898 15.1481C12.37 15.1481 12.734 15.0161 12.99 14.7521C13.254 14.4801 13.386 14.0961 13.386 13.6001H14.466C14.466 14.3761 14.234 14.9921 13.77 15.4481C13.306 15.8961 12.682 16.1201 11.898 16.1201Z" fill="var(--color-text)" id="icon-128-text"></path></svg><span>Executable<wbr/>Command</span></a>
+<ul>
+<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="ExecutableCommand.html#constructor" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-512-path"></use><use href="#icon-512-text"></use></svg>constructor</a></li>
+<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="ExecutableCommand.html#_arguments" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg>_arguments</a></li>
+<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected tsd-is-inherited tsd-is-external"><a href="ExecutableCommand.html#_chain" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg>_chain</a></li>
+<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="ExecutableCommand.html#_executable" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg>_executable</a></li>
+<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="ExecutableCommand.html#_executeAsRoot" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg>_execute<wbr/>As<wbr/>Root</a></li>
+<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="ExecutableCommand.html#_rootCommand" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg>_root<wbr/>Command</a></li>
+<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected tsd-is-inherited tsd-is-external"><a href="ExecutableCommand.html#_statement" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg>_statement</a></li>
+<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="ExecutableCommand.html#_DEFAULT_ROOT_COMMAND" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg>_DEFAULT_<wbr/>ROOT_<wbr/>COMMAND</a></li>
+<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="ExecutableCommand.html#_rootCommand-1" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg>_root<wbr/>Command</a></li>
+<li class="tsd-kind-accessor tsd-parent-kind-class"><a href="ExecutableCommand.html#arguments" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-262144-path"></use><use href="#icon-262144-text"></use></svg>arguments</a></li>
+<li class="tsd-kind-accessor tsd-parent-kind-class"><a href="ExecutableCommand.html#asRoot" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-262144-path"></use><use href="#icon-262144-text"></use></svg>as<wbr/>Root</a></li>
+<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="ExecutableCommand.html#chain" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-262144-path"></use><use href="#icon-262144-text"></use></svg>chain</a></li>
+<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="ExecutableCommand.html#comment" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-262144-path"></use><use href="#icon-262144-text"></use></svg>comment</a></li>
+<li class="tsd-kind-accessor tsd-parent-kind-class"><a href="ExecutableCommand.html#executable" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-262144-path"></use><use href="#icon-262144-text"></use></svg>executable</a></li>
+<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="ExecutableCommand.html#id" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-262144-path"></use><use href="#icon-262144-text"></use></svg>id</a></li>
+<li class="tsd-kind-accessor tsd-parent-kind-class"><a href="ExecutableCommand.html#notAsRoot" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-262144-path"></use><use href="#icon-262144-text"></use></svg>not<wbr/>As<wbr/>Root</a></li>
+<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="ExecutableCommand.html#statement" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-262144-path"></use><use href="#icon-262144-text"></use></svg>statement</a></li>
+<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="ExecutableCommand.html#value" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-262144-path"></use><use href="#icon-262144-text"></use></svg>value</a></li>
+<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="ExecutableCommand.html#_asRoot" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>_as<wbr/>Root</a></li>
+<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="ExecutableCommand.html#_updateStatement" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>_update<wbr/>Statement</a></li>
+<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="ExecutableCommand.html#and" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>and</a></li>
+<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="ExecutableCommand.html#append" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>append</a></li>
+<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="ExecutableCommand.html#clearChain" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>clear<wbr/>Chain</a></li>
+<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="ExecutableCommand.html#clearComment" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>clear<wbr/>Comment</a></li>
+<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="ExecutableCommand.html#compareIdOrPattern" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>compare<wbr/>Id<wbr/>Or<wbr/>Pattern</a></li>
+<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="ExecutableCommand.html#eval" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>eval</a></li>
+<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="ExecutableCommand.html#findInChain" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>find<wbr/>In<wbr/>Chain</a></li>
+<li class="tsd-kind-method tsd-parent-kind-class"><a href="ExecutableCommand.html#getRootCommand" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>get<wbr/>Root<wbr/>Command</a></li>
+<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="ExecutableCommand.html#meta" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>meta</a></li>
+<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="ExecutableCommand.html#or" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>or</a></li>
+<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="ExecutableCommand.html#pipe" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>pipe</a></li>
+<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="ExecutableCommand.html#read" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>read</a></li>
+<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="ExecutableCommand.html#removeFromChain" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>remove<wbr/>From<wbr/>Chain</a></li>
+<li class="tsd-kind-method tsd-parent-kind-class"><a href="ExecutableCommand.html#rootCommand" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>root<wbr/>Command</a></li>
+<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="ExecutableCommand.html#setComment" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>set<wbr/>Comment</a></li>
+<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="ExecutableCommand.html#subshell" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>subshell</a></li>
+<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="ExecutableCommand.html#write" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>write</a></li>
+<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="ExecutableCommand.html#_convertRootCommand" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>_convert<wbr/>Root<wbr/>Command</a></li>
+<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="ExecutableCommand.html#compareIdOrPattern-3" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>compare<wbr/>Id<wbr/>Or<wbr/>Pattern</a></li>
+<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="ExecutableCommand.html#convert" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>convert</a></li>
+<li class="tsd-kind-method tsd-parent-kind-class"><a href="ExecutableCommand.html#getRootCommand-2" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>get<wbr/>Root<wbr/>Command</a></li>
+<li class="tsd-kind-method tsd-parent-kind-class"><a href="ExecutableCommand.html#rootCommand-2" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>root<wbr/>Command</a></li></ul></li></ul></nav></div></div>
+<div class="container tsd-generator">
+<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></div>
+<div class="overlay"></div><script src="../assets/main.js"></script></body></html>
