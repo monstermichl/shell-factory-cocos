@@ -1,4 +1,4 @@
-name: Build shell-factory-coco
+name: Build shell-factory-cocos
 
 on:
   push:
