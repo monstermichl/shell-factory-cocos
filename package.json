@@ -16,7 +16,7 @@
   "author": "monstermichl",
   "license": "MIT",
   "dependencies": {
-    "shell-factory": "2.1.0"
+    "shell-factory": "3.0.0"
   },
   "devDependencies": {
     "@istanbuljs/nyc-config-typescript": "^1.0.2",
