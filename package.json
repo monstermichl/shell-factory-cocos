@@ -11,7 +11,7 @@
     "testCleanup": "rm -rf ./tests-build",
     "testAndCleanup": "npm run test; npm run testCleanup",
     "lint": "npx eslint .",
-    "generateDocs": "npx typedoc"
+    "example": "npm run build && node ./examples/example.js"
   },
   "author": "monstermichl",
   "license": "MIT",
