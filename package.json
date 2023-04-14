@@ -39,6 +39,7 @@
   ],
   "keywords": [
     "bourne",
+    "bash",
     "shell",
     "generator",
     "builder",
@@ -47,5 +48,9 @@
     "chainable",
     "common",
     "commands"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/monstermichl/shell-factory-cocos.git"
+  }
 }
