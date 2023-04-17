@@ -8,7 +8,7 @@ import {
  * Serves as the base for argument classes.
  */
 export abstract class ArgumentBase {
-    private _value: string;
+    private readonly _value: string;
 
     /**
      * ArgumentBase constructor.
@@ -42,13 +42,6 @@ export abstract class ArgumentBase {
     }
 
     /**
-     * Returns the full argument string.
-     */
-    public get argument(): string {
-        return this._value;
-    }
-
-    /**
      * If the provided value is empty, this function is being called
      * by the _convertValue method.
      *
@@ -59,7 +52,7 @@ export abstract class ArgumentBase {
     /**
      * Converts a string, number or boolean to a string which is wrapped
      * into quotes if it contains whitespaces.
-     * 
+     *
      * @param value Value to convert.
      * @returns Converted value.
      */

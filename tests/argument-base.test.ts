@@ -22,7 +22,6 @@ describe('ArgumentBase tests', () => {
                 const argument = new ArgumentBaseHelper(value);
 
                 expect(argument.value).to.be.equal(value);
-                expect(argument.argument).to.be.equal(value);
             });
 
             it('value with whitespaces', () => {
@@ -30,19 +29,18 @@ describe('ArgumentBase tests', () => {
                 const argument = new ArgumentBaseHelper(value);
 
                 expect(argument.value).to.be.equal(`"${value}"`);
-                expect(argument.argument).to.be.equal(`"${value}"`);
             });
 
             it('empty value', () => {
                 const argument = new ArgumentBaseHelper('');
 
-                expect(argument.argument).to.be.equal(undefined);
+                expect(argument.value).to.be.equal(undefined);
             });
 
             it('undefined value', () => {
                 const argument = new ArgumentBaseHelper();
 
-                expect(argument.argument).to.be.equal(undefined);
+                expect(argument.value).to.be.equal(undefined);
             });
         });
 

@@ -16,32 +16,15 @@ export enum SwitchType {
 /**
  * Represents a shell argument with a switch (e.g. -o result.txt).
  */
-export class SwitchArgument extends ArgumentBase {
-    private _key: string;
+export class Switch extends ArgumentBase {
+    private readonly _type: SwitchType;
 
     /**
      * SwitchArgument constructor.
      *
-     * @param key   Argument key (e.g. -o/--output).
-     * @param value Argument value (e.g. test.txt).
+     * @param key Argument key (e.g. -o/--output).
      */
-    constructor(key: string, value?: string);
-    /**
-     * SwitchArgument constructor.
-     *
-     * @param key   Argument key (e.g. -o/--output).
-     * @param value Argument value (e.g. test.txt).
-     */
-    constructor(key: string, value?: number);
-    /**
-     * SwitchArgument constructor.
-     *
-     * @param key   Argument key (e.g. -o/--output).
-     * @param value Argument value (e.g. test.txt).
-     */
-    constructor(key: string, value?: boolean);
-    /* eslint-disable-next-line @typescript-eslint/no-explicit-any */
-    constructor(key: string, value?: any) {
+    constructor(key: string) {
         /* Make sure key is convertible. */
         key = convertToString(key, (e: ConvertToStringError) => {
             switch(e) {
@@ -49,15 +32,18 @@ export class SwitchArgument extends ArgumentBase {
                 case ConvertToStringError.InvalidType: throw new Error('Invalid key type provided');
             }
         });
+        const type = Switch.evaluateSwitch(key);
 
         /* Make sure key is switch. */
-        if (!SwitchArgument.evaluateSwitch(key)) {
+        if (!type) {
             throw new Error('Key is not a valid switch');
         }
-        super(value);
+        super(key);
+        this._type = type;
+    }
 
-        /* Store key and value. */
-        this._key = key;
+    public get type(): SwitchType {
+        return this._type;
     }
 
     /**
@@ -90,26 +76,12 @@ export class SwitchArgument extends ArgumentBase {
     }
 
     /**
-     * Returns the argument's switch key.
-     */
-    public get key(): string {
-        return this._key;
-    }
-
-    /**
-     * Returns the full argument string.
-     */
-    public override get argument(): string {
-        return this.value ? `${this.key} ${this.value}` : this.key;
-    }
-
-    /**
      * If the provided value is empty, this function is being called
      * by the _convertValue method.
      *
-     * @returns Undefined.
+     * @returns Empty string.
      */
-    protected _handleEmptyValue(): undefined {
-        return undefined;
+    protected _handleEmptyValue(): string {
+        return '';
     }
 }

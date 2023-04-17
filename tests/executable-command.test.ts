@@ -1,14 +1,14 @@
 import { expect } from 'chai';
 import { Argument } from '../src/base/argument.mjs';
 import { ExecutableCommand } from '../src/base/executable-command.mjs';
-import { SwitchArgument } from '../src/base/switch-argument.mjs';
+import { Switch } from '../src/base/switch.mjs';
 
 /* Helper class to instantiate CommonCommand. */
 class ExecutableCommandHelper extends ExecutableCommand {
     /* Nothing to do. */
 }
 
-describe('ExecutbleCommand tests', () => {
+describe('ExecutableCommand tests', () => {
     describe('constructor', () => {
         describe('successful', () => {
             it('simple argument', () => {
@@ -18,7 +18,7 @@ describe('ExecutbleCommand tests', () => {
 
                 expect(command.executable).to.be.equal(executable);
                 expect(command.arguments.length).to.be.equal(1);
-                expect(command.arguments[0].argument).to.be.equal(`"${argument}"`);
+                expect(command.arguments[0].value).to.be.equal(`"${argument}"`);
                 expect(command.value).to.be.equal(`${executable} "${argument}"`);
             });
 
@@ -27,9 +27,10 @@ describe('ExecutbleCommand tests', () => {
                 const key = '-v';
                 const argument = 'echo me';
                 const command = new ExecutableCommandHelper(executable, key, argument);
-                
-                expect(command.arguments.length).to.be.equal(1);
-                expect(command.arguments[0].argument).to.be.equal(`${key} "${argument}"`);
+
+                expect(command.arguments.length).to.be.equal(2);
+                expect(command.arguments[0].value).to.be.equal(key);
+                expect(command.arguments[1].value).to.be.equal(`"${argument}"`);
                 expect(command.value).to.be.equal(`${executable} ${key} "${argument}"`);
             });
 
@@ -37,9 +38,9 @@ describe('ExecutbleCommand tests', () => {
                 const executable = 'echo';
                 const key = '-v';
                 const command = new ExecutableCommandHelper(executable, key);
-                
+
                 expect(command.arguments.length).to.be.equal(1);
-                expect(command.arguments[0].argument).to.be.equal(key);
+                expect(command.arguments[0].value).to.be.equal(key);
                 expect(command.value).to.be.equal(`${executable} ${key}`);
             });
 
@@ -48,11 +49,11 @@ describe('ExecutbleCommand tests', () => {
                 const key1 = '-v';
                 const key2 = '-o';
                 const command = new ExecutableCommandHelper(executable, key1, key2);
-                
+
                 expect(command.arguments.length).to.be.equal(2);
-                
-                expect(command.arguments[0].argument).to.be.equal(key1);
-                expect(command.arguments[1].argument).to.be.equal(key2);
+
+                expect(command.arguments[0].value).to.be.equal(key1);
+                expect(command.arguments[1].value).to.be.equal(key2);
 
                 expect(command.value).to.be.equal(`${executable} ${key1} ${key2}`);
             });
@@ -61,20 +62,27 @@ describe('ExecutbleCommand tests', () => {
                 const executable = 'echo';
                 const argument = new Argument('arg1');
                 const command = new ExecutableCommandHelper(executable, argument);
-                
+
                 expect(command.arguments.length).to.be.equal(1);
                 expect(command.arguments[0]).to.be.equal(argument);
-                expect(command.value).to.be.equal(`${executable} ${argument.argument}`);
+                expect(command.value).to.be.equal(`${executable} ${argument.value}`);
             });
 
             it('switch-argument', () => {
                 const executable = 'echo';
-                const argument = new SwitchArgument('-v', 6);
-                const command = new ExecutableCommandHelper(executable, argument);
-                
-                expect(command.arguments.length).to.be.equal(1);
-                expect(command.arguments[0]).to.be.equal(argument);
-                expect(command.value).to.be.equal(`${executable} ${argument.argument}`);
+                const switchArgument = new Switch('-v');
+                const argument = new Argument(6);
+                const command = new ExecutableCommandHelper(executable, switchArgument, argument);
+
+                expect(command.arguments.length).to.be.equal(2);
+                expect(command.arguments[0].value).to.be.equal(switchArgument.value);
+                expect(command.arguments[1].value).to.be.equal(argument.value);
+                expect(command.value).to.be.equal(`${executable} ${switchArgument.value} ${argument.value}`);
+            });
+
+            it('real examples', () => {
+                new ExecutableCommandHelper('mount', '--rbind', '\"$1\"', '\"$2\"');
+                new ExecutableCommandHelper('umount', '-R', '\"$mounted_directory\"');
             });
         });
 
@@ -84,7 +92,7 @@ describe('ExecutbleCommand tests', () => {
                     new ExecutableCommandHelper({} as any);
                 }).to.throw('Invalid executable type provided');
             });
-            
+
             it('no executable provided', () => {
                 expect(function() {
                     new ExecutableCommandHelper(undefined as any);
@@ -102,7 +110,7 @@ describe('ExecutbleCommand tests', () => {
 
                 expect(command.executable).to.be.equal(executable);
                 expect(command.arguments.length).to.be.equal(1);
-                expect(command.arguments[0].argument).to.be.equal(`"${argument}"`);
+                expect(command.arguments[0].value).to.be.equal(`"${argument}"`);
                 expect(command.value).to.be.equal(`${executable} "${argument}"`);
 
                 /* Update to execute as root. */
@@ -122,7 +130,7 @@ describe('ExecutbleCommand tests', () => {
 
                 expect(command.executable).to.be.equal(executable);
                 expect(command.arguments.length).to.be.equal(1);
-                expect(command.arguments[0].argument).to.be.equal(`"${argument}"`);
+                expect(command.arguments[0].value).to.be.equal(`"${argument}"`);
                 expect(command.value).to.be.equal(`sudo ${executable} "${argument}"`);
 
                 /* Update to execute as current user. */
@@ -145,7 +153,7 @@ describe('ExecutbleCommand tests', () => {
 
                 expect(command.executable).to.be.equal(executable);
                 expect(command.arguments.length).to.be.equal(1);
-                expect(command.arguments[0].argument).to.be.equal(`"${argument}"`);
+                expect(command.arguments[0].value).to.be.equal(`"${argument}"`);
                 expect(command.value).to.be.equal(`${rootCommand} ${executable} "${argument}"`);
             });
 
@@ -159,7 +167,7 @@ describe('ExecutbleCommand tests', () => {
 
                 expect(command.executable).to.be.equal(executable);
                 expect(command.arguments.length).to.be.equal(1);
-                expect(command.arguments[0].argument).to.be.equal(`"${argument}"`);
+                expect(command.arguments[0].value).to.be.equal(`"${argument}"`);
                 expect(command.value).to.be.equal(`${rootCommand} ${executable} "${argument}"`);
 
                 /* Reset root command. */
@@ -178,7 +186,7 @@ describe('ExecutbleCommand tests', () => {
 
                 expect(command.executable).to.be.equal(executable);
                 expect(command.arguments.length).to.be.equal(1);
-                expect(command.arguments[0].argument).to.be.equal(`"${argument}"`);
+                expect(command.arguments[0].value).to.be.equal(`"${argument}"`);
                 expect(command.value).to.be.equal(`${rootCommand} ${executable} "${argument}"`);
 
                 /* Reset general root command. */
@@ -198,7 +206,7 @@ describe('ExecutbleCommand tests', () => {
 
                 expect(command.executable).to.be.equal(executable);
                 expect(command.arguments.length).to.be.equal(1);
-                expect(command.arguments[0].argument).to.be.equal(`"${argument}"`);
+                expect(command.arguments[0].value).to.be.equal(`"${argument}"`);
                 expect(command.value).to.be.equal(`${rootCommand} ${executable} "${argument}"`);
 
                 /* Overwrite general root command. */

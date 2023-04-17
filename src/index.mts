@@ -4,8 +4,8 @@ export { ExecutableCommand } from './base/executable-command.mjs';
 export { Argument } from './base/argument.mjs';
 export {
     SwitchType,
-    SwitchArgument,
-} from './base/switch-argument.mjs';
+    Switch,
+} from './base/switch.mjs';
 
 /* From https://en.wikipedia.org/wiki/List_of_Unix_commands. */
 export const admin = (...args: string[]) => new ExecutableCommand('admin', ...args);

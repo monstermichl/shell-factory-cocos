@@ -6,10 +6,7 @@ import {
 } from 'shell-factory/helpers';
 import { ArgumentBase } from './argument-base.mjs';
 import { Argument } from './argument.mjs';
-import {
-    SwitchArgument,
-    SwitchType,
-} from './switch-argument.mjs';
+import { Switch } from './switch.mjs';
 
 /**
  * Represents a Bourne Shell executable call.
@@ -21,8 +18,8 @@ export class ExecutableCommand extends Command {
 
     private _rootCommand = ExecutableCommand._rootCommand;
     private _executeAsRoot = false;
-    private _executable: string;
-    private _arguments = [] as ArgumentBase[];
+    private readonly _executable: string;
+    private readonly _arguments = [] as ArgumentBase[];
 
     /**
      * CommonCommand constructor.
@@ -58,19 +55,16 @@ export class ExecutableCommand extends Command {
      * @param executable CommonCommand to execute.
      * @param args       CommonCommand arguments.
      */
-    constructor(executable: string, ...args: SwitchArgument[]);
+    constructor(executable: string, ...args: Switch[]);
     /**
      * CommonCommand constructor.
      *
      * @param executable CommonCommand to execute.
      * @param args       CommonCommand arguments.
      */
-    constructor(executable: string, ...args: (string | number | boolean | Argument | SwitchArgument)[]);
+    constructor(executable: string, ...args: (string | number | boolean | Argument | Switch)[]);
     constructor(executable: string, ...args: unknown[]) {
         const convertedArgs = [] as ArgumentBase[];
-
-        let previousArg: string | Argument;
-        let previousArgSwitchType: SwitchType;
 
         /* Make sure executable is valid. */
         executable = convertToString(executable, (e: ConvertToStringError) => {
@@ -82,38 +76,21 @@ export class ExecutableCommand extends Command {
         executable = wrapInQuotes(executable);
 
         /* Interpret arguments. */
-        args?.forEach((arg, index) => {
+        args?.forEach((arg) => {
             /* If value is not already Argument instance, evaluate what it is. */
             if (!(arg instanceof ArgumentBase)) {
                 /* Evaluate if value is a switch. */
-                const switchType = SwitchArgument.evaluateSwitch(arg as string);
+                const switchType = Switch.evaluateSwitch(arg as string);
 
                 /* If current argument is considered a value. */
                 if (!switchType) {
-                    /* If previous argument was switch, create a SwitchArgument. */
-                    if (previousArgSwitchType) {
-                        convertedArgs.push(new SwitchArgument(previousArg as string, arg as string));
-                    } else {
-                        convertedArgs.push(new Argument(arg as string));
-                    }
+                    convertedArgs.push(new Argument(arg as string));
                 } else {
-                    /* If current and previous arguments are considered switches, push them both
-                       without a value. */
-                    if (previousArgSwitchType) {
-                        convertedArgs.push(new SwitchArgument(previousArg as string));
-                        convertedArgs.push(new SwitchArgument(arg as string));
-
-                        previousArgSwitchType = SwitchType.None;
-                    } else if (index == (args.length - 1)) { /* If last index, it's a switch without a value. */
-                        convertedArgs.push(new SwitchArgument(arg as string));
-                    } else {
-                        previousArgSwitchType = switchType;
-                    }
+                    convertedArgs.push(new Switch(arg as string));
                 }
             } else {
                 convertedArgs.push(arg); /* If it is an argument, push it directly. */
             }
-            previousArg = arg as string | Argument;
         });
         super();
 
@@ -208,14 +185,14 @@ export class ExecutableCommand extends Command {
      */
     private _updateStatement(): this {
         const rootPart = this._executeAsRoot ? `${this._rootCommand} ` : '';
-        
-        this.statement = `${rootPart}${this.executable} ${this.arguments.map((command) => command.argument).join(' ')}`;
+
+        this.statement = `${rootPart}${this.executable} ${this.arguments.map((command) => command.value).join(' ')}`;
         return this;
     }
 
     /**
      * Sets the command to be executed as root or not as root
-     * 
+     *
      * @param executeAsRoot If true, the command is executed as root.
      */
     private _asRoot(executeAsRoot=true): this {

@@ -7,13 +7,13 @@ describe('Argument tests', () => {
             it('empty value', () => {
                 const argument = new Argument('');
 
-                expect(argument.argument).to.be.equal('""');
+                expect(argument.value).to.be.equal('""');
             });
 
             it('undefined value', () => {
                 const argument = new Argument(undefined as any);
 
-                expect(argument.argument).to.be.equal('""');
+                expect(argument.value).to.be.equal('""');
             });
         });
     });
