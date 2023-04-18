@@ -15,21 +15,21 @@ export abstract class ArgumentBase {
      *
      * @param value Argument value (e.g. test.txt).
      */
-    constructor(value?: string);
+    protected constructor(value?: string);
     /**
      * ArgumentBase constructor.
      *
      * @param value Argument value (e.g. test.txt).
      */
-    constructor(value?: number);
+    protected constructor(value?: number);
     /**
      * ArgumentBase constructor.
      *
      * @param value Argument value (e.g. test.txt).
      */
-    constructor(value?: boolean);
+    protected constructor(value?: boolean);
     /* eslint-disable-next-line @typescript-eslint/no-explicit-any */
-    constructor(value?: any) {
+    protected constructor(value?: any) {
         /* Make sure argument is convertible. */
         this._value = this._convertValue(value);
     }

@@ -3,7 +3,7 @@ import { Argument } from '../src/base/argument.mjs';
 import { ExecutableCommand } from '../src/base/executable-command.mjs';
 import { Switch } from '../src/base/switch.mjs';
 
-/* Helper class to instantiate CommonCommand. */
+/* Helper class to instantiate ExecutableCommand. */
 class ExecutableCommandHelper extends ExecutableCommand {
     /* Nothing to do. */
 }
@@ -70,7 +70,11 @@ describe('ExecutableCommand tests', () => {
 
             it('switch-argument', () => {
                 const executable = 'echo';
-                const switchArgument = new Switch('-v');
+                const switches = Switch.parse('-v');
+
+                expect(switches.length).to.be.equal(1);
+
+                const switchArgument = switches[0];
                 const argument = new Argument(6);
                 const command = new ExecutableCommandHelper(executable, switchArgument, argument);
 

@@ -3,6 +3,10 @@ import { ArgumentBase } from '../src/base/argument-base.mjs';
 
 /* Helper class to instantiate ArgumentBase. */
 class ArgumentBaseHelper extends ArgumentBase {
+    public constructor(key?: any) {
+        super(key);
+    }
+
     /**
      * If the provided value is empty, this function is being called
      * by the _convertValue method.

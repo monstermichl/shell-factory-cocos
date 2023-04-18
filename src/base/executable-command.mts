@@ -86,7 +86,7 @@ export class ExecutableCommand extends Command {
                 if (!switchType) {
                     convertedArgs.push(new Argument(arg as string));
                 } else {
-                    convertedArgs.push(new Switch(arg as string));
+                    convertedArgs.push(...Switch.parse(arg as string));
                 }
             } else {
                 convertedArgs.push(arg); /* If it is an argument, push it directly. */

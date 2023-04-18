@@ -20,24 +20,16 @@ export class Switch extends ArgumentBase {
     private readonly _type: SwitchType;
 
     /**
-     * SwitchArgument constructor.
+     * Switch constructor. This constructor is private since
+     * switches can have multiple short arguments which cannot
+     * be handled properly by a usual constructor as multiple
+     * instance are required. Instead use the parse-method.
      *
      * @param key Argument key (e.g. -o/--output).
      */
-    constructor(key: string) {
-        /* Make sure key is convertible. */
-        key = convertToString(key, (e: ConvertToStringError) => {
-            switch(e) {
-                case ConvertToStringError.EmptyValue: throw new Error('No key provided');
-                case ConvertToStringError.InvalidType: throw new Error('Invalid key type provided');
-            }
-        });
-        const type = Switch.evaluateSwitch(key);
+    private constructor(key: string) {
+        const type = Switch._validateSwitch(key);
 
-        /* Make sure key is switch. */
-        if (!type) {
-            throw new Error('Key is not a valid switch');
-        }
         super(key);
         this._type = type;
     }
@@ -76,6 +68,27 @@ export class Switch extends ArgumentBase {
     }
 
     /**
+     * Parses the provided switch key. This can result in several switch
+     * instances as short switches can be combined.
+     *
+     * @param key Switch key to be parsed.
+     * @returns Switch instances.
+     */
+    public static parse(key: string): Switch[] {
+        const type = Switch._validateSwitch(key);
+        let switches: Switch[];
+
+        if (type === SwitchType.Short) {
+            /* If it's a short switchtype, it might contain several
+               switches. These switches are instantiated separately. */
+            switches = [...key.replace(/^-/, '')].map((c) => new Switch(`-${c}`));
+        } else {
+            switches = [new Switch(key)];
+        }
+        return switches;
+    }
+
+    /**
      * If the provided value is empty, this function is being called
      * by the _convertValue method.
      *
@@ -83,5 +96,29 @@ export class Switch extends ArgumentBase {
      */
     protected _handleEmptyValue(): string {
         return '';
+    }
+
+    /**
+     * Validates the provided switch and throws an error if the switch
+     * is invalid.
+     *
+     * @param key Switch key to validate.
+     * @returns Evaluated switch type.
+     */
+    private static _validateSwitch(key: string): SwitchType {
+        /* Make sure key is convertible. */
+        key = convertToString(key, (e: ConvertToStringError) => {
+            switch(e) {
+                case ConvertToStringError.EmptyValue: throw new Error('No key provided');
+                case ConvertToStringError.InvalidType: throw new Error('Invalid key type provided');
+            }
+        });
+        const type = Switch.evaluateSwitch(key);
+
+        /* Make sure key is switch. */
+        if (!type) {
+            throw new Error('Key is not a valid switch');
+        }
+        return type;
     }
 }

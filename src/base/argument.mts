@@ -9,21 +9,21 @@ export class Argument extends ArgumentBase {
      *
      * @param value Argument value (e.g. test.txt).
      */
-    constructor(value: string);
+    public constructor(value: string);
     /**
      * Argument constructor.
      *
      * @param value Argument value (e.g. test.txt).
      */
-    constructor(value: number);
+    public constructor(value: number);
     /**
      * Argument constructor.
      *
      * @param value Argument value (e.g. test.txt).
      */
-    constructor(value: boolean);
+    public constructor(value: boolean);
     /* eslint-disable-next-line @typescript-eslint/no-explicit-any */
-    constructor(value: any) {
+    public constructor(value: any) {
         super(value);
     }
 
