@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 import { Argument } from '../src/base/argument.mjs';
 import { ExecutableCommand } from '../src/base/executable-command.mjs';
-import { Switch } from '../src/base/switch.mjs';
+import { SwitchArgument } from '../src/base/switch-argument.mjs';
 
 /* Helper class to instantiate ExecutableCommand. */
 class ExecutableCommandHelper extends ExecutableCommand {
@@ -70,7 +70,7 @@ describe('ExecutableCommand tests', () => {
 
             it('switch-argument', () => {
                 const executable = 'echo';
-                const switches = Switch.parse('-v');
+                const switches = SwitchArgument.parse('-v');
 
                 expect(switches.length).to.be.equal(1);
 

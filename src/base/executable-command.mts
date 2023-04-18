@@ -6,7 +6,7 @@ import {
 } from 'shell-factory/helpers';
 import { ArgumentBase } from './argument-base.mjs';
 import { Argument } from './argument.mjs';
-import { Switch } from './switch.mjs';
+import { SwitchArgument } from './switch-argument.mjs';
 
 /**
  * Represents a Bourne Shell executable call.
@@ -55,14 +55,14 @@ export class ExecutableCommand extends Command {
      * @param executable CommonCommand to execute.
      * @param args       CommonCommand arguments.
      */
-    constructor(executable: string, ...args: Switch[]);
+    constructor(executable: string, ...args: SwitchArgument[]);
     /**
      * CommonCommand constructor.
      *
      * @param executable CommonCommand to execute.
      * @param args       CommonCommand arguments.
      */
-    constructor(executable: string, ...args: (string | number | boolean | Argument | Switch)[]);
+    constructor(executable: string, ...args: (string | number | boolean | Argument | SwitchArgument)[]);
     constructor(executable: string, ...args: unknown[]) {
         const convertedArgs = [] as ArgumentBase[];
 
@@ -80,13 +80,13 @@ export class ExecutableCommand extends Command {
             /* If value is not already Argument instance, evaluate what it is. */
             if (!(arg instanceof ArgumentBase)) {
                 /* Evaluate if value is a switch. */
-                const switchType = Switch.evaluateSwitch(arg as string);
+                const switchType = SwitchArgument.evaluateSwitch(arg as string);
 
                 /* If current argument is considered a value. */
                 if (!switchType) {
                     convertedArgs.push(new Argument(arg as string));
                 } else {
-                    convertedArgs.push(...Switch.parse(arg as string));
+                    convertedArgs.push(...SwitchArgument.parse(arg as string));
                 }
             } else {
                 convertedArgs.push(arg); /* If it is an argument, push it directly. */

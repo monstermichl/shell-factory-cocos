@@ -7,7 +7,7 @@ import { ArgumentBase } from './argument-base.mjs';
 /**
  * SwitchArgument switch-type.
  */
-export enum SwitchType {
+export enum SwitchArgumentType {
     None  = 0, /* No switch. */
     Short = 1, /* E.g. -v */
     Long  = 2, /* E.g. --version */
@@ -16,8 +16,8 @@ export enum SwitchType {
 /**
  * Represents a shell argument with a switch (e.g. -o result.txt).
  */
-export class Switch extends ArgumentBase {
-    private readonly _type: SwitchType;
+export class SwitchArgument extends ArgumentBase {
+    private readonly _type: SwitchArgumentType;
 
     /**
      * Switch constructor. This constructor is private since
@@ -28,13 +28,13 @@ export class Switch extends ArgumentBase {
      * @param key Argument key (e.g. -o/--output).
      */
     private constructor(key: string) {
-        const type = Switch._validateSwitch(key);
+        const type = SwitchArgument._validateSwitch(key);
 
         super(key);
         this._type = type;
     }
 
-    public get type(): SwitchType {
+    public get type(): SwitchArgumentType {
         return this._type;
     }
 
@@ -46,8 +46,8 @@ export class Switch extends ArgumentBase {
      *
      * @returns SwitchType.
      */
-    public static evaluateSwitch(key: string, trim=true): SwitchType {
-        let switchType = SwitchType.None;
+    public static evaluateSwitch(key: string, trim=true): SwitchArgumentType {
+        let switchType = SwitchArgumentType.None;
 
         /* Make sure key is string. */
         if (typeof key === 'string') {
@@ -59,9 +59,9 @@ export class Switch extends ArgumentBase {
             /* If only a single dash is being provided,
                consider it a shorthand key. */
             if (key.match(/^-\w[\w-]*/)) {
-                switchType = SwitchType.Short;
+                switchType = SwitchArgumentType.Short;
             } else if (key.match(/^--\w[\w-]+/)) {
-                switchType = SwitchType.Long;
+                switchType = SwitchArgumentType.Long;
             }
         }
         return switchType;
@@ -74,16 +74,16 @@ export class Switch extends ArgumentBase {
      * @param key Switch key to be parsed.
      * @returns Switch instances.
      */
-    public static parse(key: string): Switch[] {
-        const type = Switch._validateSwitch(key);
-        let switches: Switch[];
+    public static parse(key: string): SwitchArgument[] {
+        const type = SwitchArgument._validateSwitch(key);
+        let switches: SwitchArgument[];
 
-        if (type === SwitchType.Short) {
+        if (type === SwitchArgumentType.Short) {
             /* If it's a short switchtype, it might contain several
                switches. These switches are instantiated separately. */
-            switches = [...key.replace(/^-/, '')].map((c) => new Switch(`-${c}`));
+            switches = [...key.replace(/^-/, '')].map((c) => new SwitchArgument(`-${c}`));
         } else {
-            switches = [new Switch(key)];
+            switches = [new SwitchArgument(key)];
         }
         return switches;
     }
@@ -105,7 +105,7 @@ export class Switch extends ArgumentBase {
      * @param key Switch key to validate.
      * @returns Evaluated switch type.
      */
-    private static _validateSwitch(key: string): SwitchType {
+    private static _validateSwitch(key: string): SwitchArgumentType {
         /* Make sure key is convertible. */
         key = convertToString(key, (e: ConvertToStringError) => {
             switch(e) {
@@ -113,7 +113,7 @@ export class Switch extends ArgumentBase {
                 case ConvertToStringError.InvalidType: throw new Error('Invalid key type provided');
             }
         });
-        const type = Switch.evaluateSwitch(key);
+        const type = SwitchArgument.evaluateSwitch(key);
 
         /* Make sure key is switch. */
         if (!type) {

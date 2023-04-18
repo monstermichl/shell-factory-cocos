@@ -3,9 +3,9 @@ import { ExecutableCommand } from './base/executable-command.mjs';
 export { ArgumentBase } from './base/argument-base.mjs';
 export { Argument } from './base/argument.mjs';
 export {
-    SwitchType,
-    Switch,
-} from './base/switch.mjs';
+    SwitchArgumentType,
+    SwitchArgument,
+} from './base/switch-argument.mjs';
 export { ExecutableCommand } from './base/executable-command.mjs';
 
 /* From https://en.wikipedia.org/wiki/List_of_Unix_commands. */
