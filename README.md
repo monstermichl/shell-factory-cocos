@@ -200,7 +200,6 @@ At the moment the following commands are supported. Many of them were taken from
 - less
 - pushd
 - popd
-- exit
 - chroot
 - mount
 - umount
