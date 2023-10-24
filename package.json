@@ -1,6 +1,6 @@
 {
   "name": "shell-factory-cocos",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Common commands collection for shell-factory",
   "main": "./dist/index.mjs",
   "types": "./dist/index.d.mts",
