@@ -105,7 +105,7 @@ export class ExecutableCommand extends Command {
      *
      * @returns Root command string.
      */
-    public static getRootCommand(): string {
+    public static get rootCommand(): string {
         return ExecutableCommand._rootCommand;
     }
 
@@ -114,8 +114,15 @@ export class ExecutableCommand extends Command {
      *
      * @returns Root command string.
      */
-    public getRootCommand(): string {
+    public get rootCommand(): string {
         return this._rootCommand;
+    }
+
+    /**
+     * Returns if the command shall be executed as root.
+     */
+    public get asRoot(): boolean {
+        return this._executeAsRoot;
     }
 
     /**
@@ -137,7 +144,7 @@ export class ExecutableCommand extends Command {
      *
      * @param root If true, the command is executed as root.
      */
-    public setAsRoot(root: boolean): this {
+    public runAsRoot(root: boolean): this {
         this._executeAsRoot = !!root;
         this._updateStatement();
 

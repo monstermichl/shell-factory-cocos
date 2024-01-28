@@ -22,7 +22,7 @@ const script = new Script([
     echo('Lets try to grep this command')
         .pipe(grep('-e', 'this'))
         .pipe(sed('-e', 's/this/that/g'))
-        .asRoot,
+        .runAsRoot(true),
 ]);
 
 console.log(script.dump());

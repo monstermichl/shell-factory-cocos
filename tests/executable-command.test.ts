@@ -105,7 +105,7 @@ describe('ExecutableCommand tests', () => {
         });
     });
 
-    describe('asRoot', () => {
+    describe('runAsRoot', () => {
         describe('successful', () => {
             it('execute as root', () => {
                 const executable = 'echo';
@@ -118,19 +118,19 @@ describe('ExecutableCommand tests', () => {
                 expect(command.value).to.be.equal(`${executable} "${argument}"`);
 
                 /* Update to execute as root. */
-                command.setAsRoot(true);
+                command.runAsRoot(true);
 
                 expect(command.value).to.be.equal(`sudo ${executable} "${argument}"`);
             });
-        });
-    });
 
-    describe('notAsRoot', () => {
-        describe('successful', () => {
             it('execute as current user', () => {
                 const executable = 'echo';
                 const argument = 'echo me';
-                const command = new ExecutableCommandHelper(executable, argument).setAsRoot(true);
+                const command = new ExecutableCommandHelper(executable, argument);
+
+                expect(command.asRoot).to.be.false;
+                command.runAsRoot(true);
+                expect(command.asRoot).to.be.true;
 
                 expect(command.executable).to.be.equal(executable);
                 expect(command.arguments.length).to.be.equal(1);
@@ -138,20 +138,21 @@ describe('ExecutableCommand tests', () => {
                 expect(command.value).to.be.equal(`sudo ${executable} "${argument}"`);
 
                 /* Update to execute as current user. */
-                command.setAsRoot(false);
+                command.runAsRoot(false);
+                expect(command.asRoot).to.be.false;
 
                 expect(command.value).to.be.equal(`${executable} "${argument}"`);
             });
         });
     });
 
-    describe('rootCommand', () => {
+    describe('setRootCommand', () => {
         describe('successful', () => {
             it('instance root command', () => {
                 const rootCommand = 'doas';
                 const executable = 'echo';
                 const argument = 'echo me';
-                const command = new ExecutableCommandHelper(executable, argument).setAsRoot(true);
+                const command = new ExecutableCommandHelper(executable, argument).runAsRoot(true);
 
                 command.setRootCommand(rootCommand);
 
@@ -165,7 +166,7 @@ describe('ExecutableCommand tests', () => {
                 const rootCommand = 'doas';
                 const executable = 'echo';
                 const argument = 'echo me';
-                const command = new ExecutableCommandHelper(executable, argument).setAsRoot(true);
+                const command = new ExecutableCommandHelper(executable, argument).runAsRoot(true);
 
                 command.setRootCommand(rootCommand);
 
@@ -176,7 +177,7 @@ describe('ExecutableCommand tests', () => {
 
                 /* Reset root command. */
                 command.setRootCommand();
-                expect(command.getRootCommand()).to.be.equal('sudo');
+                expect(command.rootCommand).to.be.equal('sudo');
             });
 
             it('static root command', () => {
@@ -186,7 +187,7 @@ describe('ExecutableCommand tests', () => {
 
                 const executable = 'echo';
                 const argument = 'echo me';
-                const command = new ExecutableCommandHelper(executable, argument).setAsRoot(true);
+                const command = new ExecutableCommandHelper(executable, argument).runAsRoot(true);
 
                 expect(command.executable).to.be.equal(executable);
                 expect(command.arguments.length).to.be.equal(1);
@@ -195,7 +196,7 @@ describe('ExecutableCommand tests', () => {
 
                 /* Reset general root command. */
                 ExecutableCommand.setRootCommand();
-                expect(ExecutableCommand.getRootCommand()).to.be.equal('sudo');
+                expect(ExecutableCommand.rootCommand).to.be.equal('sudo');
             });
 
             it('overwrite static root command', () => {
@@ -206,7 +207,7 @@ describe('ExecutableCommand tests', () => {
 
                 const executable = 'echo';
                 const argument = 'echo me';
-                const command = new ExecutableCommandHelper(executable, argument).setAsRoot(true);
+                const command = new ExecutableCommandHelper(executable, argument).runAsRoot(true);
 
                 expect(command.executable).to.be.equal(executable);
                 expect(command.arguments.length).to.be.equal(1);
@@ -220,7 +221,7 @@ describe('ExecutableCommand tests', () => {
 
                 /* Reset general root command. */
                 ExecutableCommand.setRootCommand();
-                expect(ExecutableCommand.getRootCommand()).to.be.equal('sudo');
+                expect(ExecutableCommand.rootCommand).to.be.equal('sudo');
             });
         });
 
