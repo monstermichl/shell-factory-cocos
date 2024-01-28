@@ -133,17 +133,15 @@ export class ExecutableCommand extends Command {
     }
 
     /**
-     * Sets the command to be executed as root.
+     * Sets the command to be executed as root or not as root
+     *
+     * @param root If true, the command is executed as root.
      */
-    public get asRoot(): this {
-        return this._asRoot(true);
-    }
+    public setAsRoot(root: boolean): this {
+        this._executeAsRoot = !!root;
+        this._updateStatement();
 
-    /**
-     * Sets the command to be executed as current user.
-     */
-    public get notAsRoot(): this {
-        return this._asRoot(false);
+        return this;
     }
 
     /**
@@ -151,7 +149,7 @@ export class ExecutableCommand extends Command {
      *
      * @param command Root command (e.g. sudo)-
      */
-    public rootCommand(command?: string): this {
+    public setRootCommand(command?: string): this {
         this._rootCommand = ExecutableCommand._convertRootCommand(command, ExecutableCommand._rootCommand);
         return this._updateStatement();
     }
@@ -161,7 +159,7 @@ export class ExecutableCommand extends Command {
      *
      * @param command Root command (e.g. sudo)-
      */
-    public static rootCommand(command?: string): void {
+    public static setRootCommand(command?: string): void {
         ExecutableCommand._rootCommand = ExecutableCommand._convertRootCommand(command, ExecutableCommand._DEFAULT_ROOT_COMMAND);
     }
 
@@ -187,18 +185,6 @@ export class ExecutableCommand extends Command {
         const rootPart = this._executeAsRoot ? `${this._rootCommand} ` : '';
 
         this.statement = `${rootPart}${this.executable} ${this.arguments.map((command) => command.value).join(' ')}`;
-        return this;
-    }
-
-    /**
-     * Sets the command to be executed as root or not as root
-     *
-     * @param executeAsRoot If true, the command is executed as root.
-     */
-    private _asRoot(executeAsRoot=true): this {
-        this._executeAsRoot = !!executeAsRoot;
-        this._updateStatement();
-
         return this;
     }
 }
