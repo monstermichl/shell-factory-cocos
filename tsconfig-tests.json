@@ -5,8 +5,8 @@
     "outDir": "./tests-build",
     "noImplicitAny": true,
     "noImplicitOverride": true,
-    "module": "ESNext",
-    "moduleResolution": "nodenext",
+    "moduleResolution": "NodeNext",
+    "module": "NodeNext",
     "target": "ES2022",
     "sourceMap": true
   },
