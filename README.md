@@ -1,4 +1,4 @@
-# Shell-factory-cocos
+# shell-factory-cocos
 Shell-factory-cocos (shell-factory common commands) extends the functionality of [shell-factory](https://github.com/monstermichl/shell-factory) by a set of commands generally used in shell scripts. This collection is by no means complete and should be extended by anyone who thinks something is missing :) At this point, this is a simple wrapper over shell-factory's [Command](https://github.com/monstermichl/shell-factory#command)-class. *It does not apply any checks on the provided commands.*
 
 ```sh
