@@ -1,11 +1,11 @@
-import { defineConfig, globalIgnores } from "eslint/config";
-import typescriptEslint from "@typescript-eslint/eslint-plugin";
-import globals from "globals";
-import tsParser from "@typescript-eslint/parser";
-import path from "node:path";
-import { fileURLToPath } from "node:url";
-import js from "@eslint/js";
-import { FlatCompat } from "@eslint/eslintrc";
+import { defineConfig, globalIgnores } from 'eslint/config';
+import typescriptEslint from '@typescript-eslint/eslint-plugin';
+import globals from 'globals';
+import tsParser from '@typescript-eslint/parser';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+import js from '@eslint/js';
+import { FlatCompat } from '@eslint/eslintrc';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -16,16 +16,16 @@ const compat = new FlatCompat({
 });
 
 export default defineConfig([globalIgnores([
-    "examples/**/*",
-    "dist/**/*",
-    "tests/**/*",
-    "docs/**/*",
-    "node_modules/**/*",
+    'examples/**/*',
+    'dist/**/*',
+    'tests/**/*',
+    'docs/**/*',
+    'node_modules/**/*',
 ]), {
-    extends: compat.extends("eslint:recommended", "plugin:@typescript-eslint/recommended"),
+    extends: compat.extends('eslint:recommended', 'plugin:@typescript-eslint/recommended'),
 
     plugins: {
-        "@typescript-eslint": typescriptEslint,
+        '@typescript-eslint': typescriptEslint,
     },
 
     languageOptions: {
@@ -34,17 +34,17 @@ export default defineConfig([globalIgnores([
         },
 
         parser: tsParser,
-        ecmaVersion: "latest",
-        sourceType: "module",
+        ecmaVersion: 'latest',
+        sourceType: 'module',
     },
 
     rules: {
-        indent: ["error", 4, {
+        indent: ['error', 4, {
             SwitchCase: 1,
         }],
 
-        "linebreak-style": ["error", "unix"],
-        quotes: ["error", "single"],
-        semi: ["error", "always"],
+        'linebreak-style': ['error', 'unix'],
+        quotes: ['error', 'single'],
+        semi: ['error', 'always'],
     },
 }]);
